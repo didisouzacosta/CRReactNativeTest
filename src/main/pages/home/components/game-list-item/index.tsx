@@ -26,10 +26,13 @@ const GameListItem = ({game, onPress}: Props) => {
           <Text
             style={styles.producer}
             testID="producer"
-            accessibilityLabel="Producer">
+            accessibilityLabel={`${game.producer}`}>
             {producer}
           </Text>
-          <Text style={styles.title} testID="title" accessibilityLabel="Title">
+          <Text
+            style={styles.title}
+            testID="title"
+            accessibilityLabel={`${game.title}`}>
             {title}
           </Text>
           <GamePriceProvider
@@ -40,14 +43,14 @@ const GameListItem = ({game, onPress}: Props) => {
                   <Text
                     style={styles.oldPrice}
                     testID="old_price"
-                    accessibilityLabel="Old price">
+                    accessibilityLabel={`To ${oldPriceFormatted}`}>
                     {oldPriceFormatted}
                   </Text>
                 )}
                 <Text
                   style={styles.price}
                   testID="price"
-                  accessibilityLabel="Price">
+                  accessibilityLabel={`For ${finalPriceFormatted}`}>
                   {finalPriceFormatted}
                 </Text>
               </>
