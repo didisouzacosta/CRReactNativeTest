@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game List Item renders correctly 1`] = `
+<RCTScrollView
+  horizontal={true}
+  pagingEnabled={true}
+  showsHorizontalScrollIndicator={false}
+  style={
+    Object {
+      "aspectRatio": 1.7777777777777777,
+      "marginLeft": -4,
+      "marginRight": -4,
+      "overflow": "visible",
+    }
+  }
+  testID="carrousel"
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "width": "100%",
+          },
+          Object {
+            "display": "flex",
+          },
+          Object {
+            "alignItems": undefined,
+            "flexDirection": "row",
+            "justifyContent": undefined,
+          },
+        ]
+      }
+      testID="stack-view"
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "aspectRatio": 1.7777777777777777,
+            "backgroundColor": "white",
+            "borderRadius": 9,
+            "marginLeft": 4,
+            "marginRight": 4,
+            "opacity": 1,
+            "overflow": "hidden",
+          }
+        }
+        testID="carrousel-item"
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#252525",
+              "borderRadius": 8,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+            style={
+              Object {
+                "left": "50%",
+                "marginLeft": -8,
+                "marginTop": -8,
+                "position": "absolute",
+                "top": "50%",
+              }
+            }
+            testID="image-loader"
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <FastImageView
+              onFastImageLoadEnd={[Function]}
+              resizeMode="cover"
+              source={
+                Object {
+                  "uri": "https://consultaremedios.com.br/assets/logos/og_image-60d1cd891a91b6a811587d22d8a19ae3d96d904e3eeec8cfc1060d572b0cbc14.jpg",
+                }
+              }
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 0,
+            "width": 0,
+          }
+        }
+        testID="stack-view-spacer"
+      />
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "aspectRatio": 1.7777777777777777,
+            "backgroundColor": "white",
+            "borderRadius": 9,
+            "marginLeft": 4,
+            "marginRight": 4,
+            "opacity": 1,
+            "overflow": "hidden",
+          }
+        }
+        testID="carrousel-item"
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#252525",
+              "borderRadius": 8,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+            style={
+              Object {
+                "left": "50%",
+                "marginLeft": -8,
+                "marginTop": -8,
+                "position": "absolute",
+                "top": "50%",
+              }
+            }
+            testID="image-loader"
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <FastImageView
+              onFastImageLoadEnd={[Function]}
+              resizeMode="cover"
+              source={
+                Object {
+                  "uri": "https://consultaremedios.com.br/assets/logos/og_image-60d1cd891a91b6a811587d22d8a19ae3d96d904e3eeec8cfc1060d572b0cbc14.jpg",
+                }
+              }
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

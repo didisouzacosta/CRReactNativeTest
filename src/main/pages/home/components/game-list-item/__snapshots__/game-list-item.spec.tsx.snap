@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game List Item renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="game-list-item"
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "display": "flex",
+        },
+        Object {
+          "alignItems": undefined,
+          "flexDirection": "column",
+          "justifyContent": undefined,
+        },
+      ]
+    }
+    testID="stack-view"
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#252525",
+          "borderRadius": 8,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#999999"
+        hidesWhenStopped={true}
+        size="small"
+        style={
+          Object {
+            "left": "50%",
+            "marginLeft": -8,
+            "marginTop": -8,
+            "position": "absolute",
+            "top": "50%",
+          }
+        }
+        testID="image-loader"
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "overflow": "hidden",
+            },
+            Object {
+              "aspectRatio": 1,
+              "borderRadius": 8,
+            },
+          ]
+        }
+      >
+        <FastImageView
+          onFastImageLoadEnd={[Function]}
+          resizeMode="cover"
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 8,
+          "width": 8,
+        }
+      }
+      testID="stack-view-spacer"
+    />
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "display": "flex",
+          },
+          Object {
+            "alignItems": undefined,
+            "flexDirection": "column",
+            "justifyContent": undefined,
+          },
+        ]
+      }
+      testID="stack-view"
+    >
+      <Text
+        accessibilityLabel="Producer"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 17,
+            },
+            Object {
+              "fontSize": 12,
+            },
+          ]
+        }
+        testID="producer"
+      >
+        Nintendo
+      </Text>
+      <View
+        style={
+          Object {
+            "height": 4,
+            "width": 4,
+          }
+        }
+        testID="stack-view-spacer"
+      />
+      <Text
+        accessibilityLabel="Title"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 17,
+            },
+            Object {
+              "fontWeight": "bold",
+            },
+          ]
+        }
+        testID="title"
+      >
+        Zelda
+      </Text>
+      <View
+        style={
+          Object {
+            "height": 4,
+            "width": 4,
+          }
+        }
+        testID="stack-view-spacer"
+      />
+      <Text
+        accessibilityLabel="Old price"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 17,
+            },
+            Object {
+              "fontSize": 12,
+              "textDecorationLine": "line-through",
+            },
+          ]
+        }
+        testID="old_price"
+      >
+        de R$ 100,00
+      </Text>
+      <Text
+        accessibilityLabel="Price"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 17,
+            },
+            Object {
+              "color": "#0091FF",
+              "fontWeight": "bold",
+            },
+          ]
+        }
+        testID="price"
+      >
+        R$ 90,00
+      </Text>
+    </View>
+  </View>
+</View>
+`;

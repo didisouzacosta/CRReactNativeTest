@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StackView component ensure custom style configurations 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f1f1f1",
+        "borderRadius": 16,
+        "height": 100,
+        "padding": 16,
+        "width": 300,
+      },
+      Object {
+        "display": "flex",
+      },
+      Object {
+        "alignItems": undefined,
+        "flexDirection": "column",
+        "justifyContent": undefined,
+      },
+    ]
+  }
+  testID="stack-view"
+>
+  <Text
+    style={
+      Object {
+        "width": 30,
+      }
+    }
+    testID="game"
+  >
+    1) Zelda Breath Of The Wild
+  </Text>
+  <View
+    style={
+      Object {
+        "height": 8,
+        "width": 8,
+      }
+    }
+    testID="stack-view-spacer"
+  />
+  <Text
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    testID="game"
+  >
+    2) Super Metroid
+  </Text>
+</View>
+`;
+
+exports[`StackView component renders correctly 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "display": "flex",
+      },
+      Object {
+        "alignItems": undefined,
+        "flexDirection": "column",
+        "justifyContent": undefined,
+      },
+    ]
+  }
+  testID="stack-view"
+>
+  <Text
+    testID="game"
+  >
+    1) Zelda Breath Of The Wild
+  </Text>
+  <View
+    style={
+      Object {
+        "height": 8,
+        "width": 8,
+      }
+    }
+    testID="stack-view-spacer"
+  />
+  <Text
+    testID="game"
+  >
+    2) Super Metroid
+  </Text>
+</View>
+`;
+
+exports[`StackView component there should be no spaces when there is only 1 child 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "display": "flex",
+      },
+      Object {
+        "alignItems": undefined,
+        "flexDirection": "column",
+        "justifyContent": undefined,
+      },
+    ]
+  }
+  testID="stack-view"
+>
+  <Text
+    testID="game"
+  >
+    1) Zelda Breath Of The Wild
+  </Text>
+</View>
+`;
