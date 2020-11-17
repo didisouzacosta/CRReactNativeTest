@@ -1,19 +1,13 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  TextInput,
-  StyleProp,
-  ViewStyle,
-  Button,
-} from 'react-native';
+import {View, StyleSheet, TextInput, StyleProp, ViewStyle} from 'react-native';
 import {StackView} from '../../../../components';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
+  onPress?(): void;
 };
 
-const SearchBar = ({style}: Props) => {
+const SearchBar = ({style, onPress}: Props) => {
   return (
     <View testID="search-bar" style={[styles.container, style]}>
       <StackView direction="row" spacing={16}>
@@ -21,7 +15,6 @@ const SearchBar = ({style}: Props) => {
           style={styles.placeholder}
           placeholder="Informe o termo de busca"
         />
-        <Button title="Search" onPress={() => {}} />
       </StackView>
     </View>
   );
