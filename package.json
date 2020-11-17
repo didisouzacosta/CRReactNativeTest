@@ -46,6 +46,9 @@
       "html",
       "lcov"
     ],
+    "moduleNameMapper": {
+      "\\.svg": "<rootDir>/__mocks__/svgMock.js"
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",

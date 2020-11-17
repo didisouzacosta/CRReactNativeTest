@@ -10,7 +10,7 @@ type Props = {
 };
 
 const SearchBar = ({style, onPress}: Props) => {
-  const {SearchIcon} = Assets.icons;
+  const SearchIcon = Assets.icons.SearchIcon;
 
   return (
     <View testID="search-bar" style={[styles.container, style]}>
