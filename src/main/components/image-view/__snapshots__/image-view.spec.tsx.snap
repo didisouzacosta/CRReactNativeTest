@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageView renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#252525",
+      "borderRadius": 8,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#999999"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Object {
+        "left": "50%",
+        "marginLeft": -8,
+        "marginTop": -8,
+        "position": "absolute",
+        "top": "50%",
+      }
+    }
+    testID="image-loader"
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 16,
+          "height": 300,
+          "width": 300,
+        },
+      ]
+    }
+  >
+    <FastImageView
+      onFastImageLoadEnd={[Function]}
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "https://randomwordgenerator.com/img/picture-generator/54e3dd404c5aaf14f1dc8460962e33791c3ad6e04e5074417c2f7dd6954cc1_640.jpg",
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;

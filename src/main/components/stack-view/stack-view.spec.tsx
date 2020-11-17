@@ -1,8 +1,8 @@
 import React from 'react';
+import {render} from '@testing-library/react-native';
+
 import {Text} from 'react-native';
 import StackView from './index';
-
-import {render} from '@testing-library/react-native';
 
 describe('StackView component', () => {
   it('renders correctly', () => {
