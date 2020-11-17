@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, StyleProp, ViewStyle} from 'react-native';
 
-import {StackView} from '../../../../components';
+import StackView from '../../../../components/stack-view';
 import Assets from './../../../../../assets';
 
 type Props = {

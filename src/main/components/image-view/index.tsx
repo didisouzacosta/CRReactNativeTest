@@ -9,7 +9,7 @@ type Props = {
   uri?: string;
 };
 
-const Image = ({testID, style, accessibilityLabel, uri}: Props) => {
+const ImageView = ({testID, style, accessibilityLabel, uri}: Props) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Image;
+export default ImageView;

@@ -2,7 +2,9 @@ import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 
 import {Game} from '../../../../../domain/types';
-import {StackView, Text, Image} from '../../../../components';
+import StackView from '../../../../components/stack-view';
+import Text from '../../../../components/typography/text';
+import ImageView from '../../../../components/image-view';
 import GamePriceProvider from '../../../../providers/game-price-privider';
 
 type Props = {
@@ -21,7 +23,7 @@ const GameListItem = ({game, onPress}: Props) => {
         if (onPress) onPress(game);
       }}>
       <StackView style={styles.container}>
-        <Image style={styles.image} uri={imageURL} />
+        <ImageView style={styles.image} uri={imageURL} />
         <StackView spacing={4}>
           <Text
             style={styles.producer}

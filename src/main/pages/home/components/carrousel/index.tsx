@@ -1,7 +1,9 @@
 import React from 'react';
 import {ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
+
 import {Banner} from '../../../../../domain/types';
-import {StackView, Image} from '../../../../components';
+import StackView from '../../../../components/stack-view';
+import ImageView from '../../../../components/image-view';
 
 type Prop = {
   banners: Banner[];
@@ -26,7 +28,7 @@ const Carrousel = ({banners, onPress}: Prop) => {
             onPress={() => {
               if (onPress) onPress(banner);
             }}>
-            <Image style={styles.image} uri={banner.imageURL} />
+            <ImageView style={styles.image} uri={banner.imageURL} />
           </TouchableOpacity>
         ))}
       </StackView>
