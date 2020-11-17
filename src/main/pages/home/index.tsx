@@ -31,36 +31,36 @@ const Home = () => {
   }, [banners]);
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <StackView spacing={32} style={styles.container}>
-        <SearchBar />
-        <GameList
-          games={games}
-          header={header}
-          onPress={(game) => console.log(game)}
-        />
-        <CartButton style={styles.cartButton} />
-      </StackView>
-    </SafeAreaView>
+    <SearchBar style={styles.searchBar}>
+      <SafeAreaView style={styles.safeArea}>
+        <StackView spacing={32}>
+          <GameList
+            games={games}
+            header={header}
+            onPress={(game) => console.log(game)}
+          />
+          <CartButton style={styles.cartButton} />
+        </StackView>
+      </SafeAreaView>
+    </SearchBar>
   );
 };
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
+  searchBar: {
     backgroundColor: '#323232',
   },
-  container: {
+  safeArea: {
     flex: 1,
-    padding: 16,
+    margin: 16,
   },
   bannerContainer: {
     marginBottom: 32,
   },
   cartButton: {
     position: 'absolute',
-    right: 40,
-    bottom: 20,
+    right: 20,
+    bottom: 40,
   },
 });
 

@@ -1,55 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home Page renders correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
-    Object {
-      "backgroundColor": "#323232",
-      "flex": 1,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#323232",
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
   }
 >
-  <View
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
     style={
-      Array [
-        Object {
-          "flex": 1,
-          "padding": 16,
-        },
-        Object {
-          "display": "flex",
-        },
-        Object {
-          "alignItems": undefined,
-          "flexDirection": "column",
-          "justifyContent": undefined,
-        },
-      ]
+      Object {
+        "margin": 16,
+        "marginBottom": 16,
+        "zIndex": 2,
+      }
     }
-    testID="stack-view"
   >
     <View
       style={
-        Array [
-          Object {
-            "backgroundColor": "white",
-            "borderRadius": 8,
-            "paddingBottom": 12,
-            "paddingLeft": 16,
-            "paddingRight": 16,
-            "paddingTop": 12,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": 0,
-            },
-            "shadowOpacity": 0.4,
-            "shadowRadius": 10,
-            "zIndex": 1,
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 8,
+          "marginTop": 16,
+          "paddingBottom": 12,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 12,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 4,
+            "width": 0,
           },
-          undefined,
-        ]
+          "shadowOpacity": 0.4,
+          "shadowRadius": 10,
+        }
       }
       testID="search-bar"
     >
@@ -71,6 +62,9 @@ exports[`Home Page renders correctly 1`] = `
       >
         <TextInput
           allowFontScaling={true}
+          clearButtonMode="while-editing"
+          onEndEditing={[Function]}
+          onFocus={[Function]}
           placeholder="Informe o termo de busca"
           rejectResponderTermination={true}
           style={
@@ -96,131 +90,35 @@ exports[`Home Page renders correctly 1`] = `
         />
       </View>
     </View>
+  </RCTSafeAreaView>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+        "margin": 16,
+      }
+    }
+  >
     <View
-      style={
-        Object {
-          "height": 32,
-          "width": 32,
-        }
-      }
-      testID="stack-view-spacer"
-    />
-    <RCTScrollView
-      ItemSeparatorComponent={[Function]}
-      ListHeaderComponent={
-        <View
-          style={
-            Object {
-              "marginBottom": 32,
-            }
-          }
-        >
-          <Memo(Carrousel)
-            banners={
-              Array [
-                Object {
-                  "imageURL": "https://images.tcdn.com.br/img/img_prod/654759/1555707974_banner-cat-switch.png",
-                  "url": "https://www.nintendo.com/pt_BR/?cid=L001-01:ch=pmpd",
-                },
-                Object {
-                  "imageURL": "https://pm1.narvii.com/6572/5df87ba23f32b6e901f5ee13427c2294f6d6a396_hq.jpg",
-                  "url": "https://www.apple.com/",
-                },
-                Object {
-                  "imageURL": "https://switchplayer.net/wp-content/uploads/2017/03/Nintendo-Switch-List-Banner-1.png",
-                  "url": "https://consultaremedios.com.br/",
-                },
-              ]
-            }
-            onPress={[Function]}
-          />
-        </View>
-      }
-      data={
-        Array [
-          Object {
-            "imageURL": "https://www.nintenderos.com/wp-content/uploads/2018/08/the-legend-of-zelda-breath-of-the-wild.jpg",
-            "price": Object {
-              "discount": 0,
-              "price": 350,
-            },
-            "producer": "Nintendo",
-            "title": "Zelda Breath of The Wild",
-          },
-          Object {
-            "imageURL": "https://cdn.inprnt.com/thumbs/38/e3/38e3dc31c478be4b290744acc17cbc0c.jpg?response-cache-control=max-age=2628000",
-            "price": Object {
-              "discount": 100,
-              "price": 200,
-            },
-            "producer": "Nintendo",
-            "title": "Super Metroid",
-          },
-          Object {
-            "imageURL": "https://img.ibxk.com.br/2018/08/15/15121619540042.jpg?w=704&h=264&mode=crop&scale=both",
-            "price": Object {
-              "discount": 400,
-              "price": 350,
-            },
-            "producer": "Nintendo",
-            "title": "Hollow Night",
-          },
-          Object {
-            "imageURL": "https://images-na.ssl-images-amazon.com/images/I/71h5dWJt+XL.jpg",
-            "price": Object {
-              "discount": 100,
-              "price": 250,
-            },
-            "producer": "Nintendo",
-            "title": "Donkey Kong",
-          },
-          Object {
-            "imageURL": "https://webtudo.net/wp-content/uploads/2017/03/Super-Mario-Bros.jpg",
-            "price": Object {
-              "discount": 100,
-              "price": 350,
-            },
-            "producer": "Nintendo",
-            "title": "Super Mario All Stars Delux",
-          },
-        ]
-      }
-      disableVirtualization={false}
-      getItem={[Function]}
-      getItemCount={[Function]}
-      horizontal={false}
-      initialNumToRender={10}
-      keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
-      onContentSizeChange={[Function]}
-      onEndReachedThreshold={2}
-      onLayout={[Function]}
-      onMomentumScrollEnd={[Function]}
-      onScroll={[Function]}
-      onScrollBeginDrag={[Function]}
-      onScrollEndDrag={[Function]}
-      removeClippedSubviews={false}
-      renderItem={[Function]}
-      scrollEventThrottle={50}
-      showsVerticalScrollIndicator={false}
-      stickyHeaderIndices={Array []}
       style={
         Array [
           undefined,
           Object {
-            "overflow": "visible",
+            "display": "flex",
+          },
+          Object {
+            "alignItems": undefined,
+            "flexDirection": "column",
+            "justifyContent": undefined,
           },
         ]
       }
-      testID="game-list"
-      updateCellsBatchingPeriod={50}
-      viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
+      testID="stack-view"
     >
-      <View>
-        <View
-          onLayout={[Function]}
-        >
+      <RCTScrollView
+        ItemSeparatorComponent={[Function]}
+        ListHeaderComponent={
           <View
             style={
               Object {
@@ -228,1523 +126,1637 @@ exports[`Home Page renders correctly 1`] = `
               }
             }
           >
-            <RCTScrollView
-              horizontal={true}
-              pagingEnabled={true}
-              showsHorizontalScrollIndicator={false}
-              style={
-                Object {
-                  "aspectRatio": 1.7777777777777777,
-                  "marginLeft": -4,
-                  "marginRight": -4,
-                  "overflow": "visible",
-                }
+            <Memo(Carrousel)
+              banners={
+                Array [
+                  Object {
+                    "imageURL": "https://images.tcdn.com.br/img/img_prod/654759/1555707974_banner-cat-switch.png",
+                    "url": "https://www.nintendo.com/pt_BR/?cid=L001-01:ch=pmpd",
+                  },
+                  Object {
+                    "imageURL": "https://pm1.narvii.com/6572/5df87ba23f32b6e901f5ee13427c2294f6d6a396_hq.jpg",
+                    "url": "https://www.apple.com/",
+                  },
+                  Object {
+                    "imageURL": "https://switchplayer.net/wp-content/uploads/2017/03/Nintendo-Switch-List-Banner-1.png",
+                    "url": "https://consultaremedios.com.br/",
+                  },
+                ]
               }
-              testID="carrousel"
-            >
-              <View>
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "width": "100%",
-                      },
-                      Object {
-                        "display": "flex",
-                      },
-                      Object {
-                        "alignItems": undefined,
-                        "flexDirection": "row",
-                        "justifyContent": undefined,
-                      },
-                    ]
-                  }
-                  testID="stack-view"
-                >
-                  <View
-                    accessible={true}
-                    focusable={true}
-                    onClick={[Function]}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "aspectRatio": 1.7777777777777777,
-                        "backgroundColor": "white",
-                        "borderRadius": 9,
-                        "marginLeft": 4,
-                        "marginRight": 4,
-                        "opacity": 1,
-                        "overflow": "hidden",
-                      }
-                    }
-                    testID="carrousel-item"
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#252525",
-                          "borderRadius": 8,
-                        }
-                      }
-                    >
-                      <ActivityIndicator
-                        animating={true}
-                        color="#999999"
-                        hidesWhenStopped={true}
-                        size="small"
-                        style={
-                          Object {
-                            "left": "50%",
-                            "marginLeft": -8,
-                            "marginTop": -8,
-                            "position": "absolute",
-                            "top": "50%",
-                          }
-                        }
-                        testID="image-loader"
-                      />
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "overflow": "hidden",
-                            },
-                            Object {
-                              "height": "100%",
-                              "width": "100%",
-                            },
-                          ]
-                        }
-                      >
-                        <FastImageView
-                          onFastImageLoadEnd={[Function]}
-                          resizeMode="cover"
-                          source={
-                            Object {
-                              "uri": "https://images.tcdn.com.br/img/img_prod/654759/1555707974_banner-cat-switch.png",
-                            }
-                          }
-                          style={
-                            Object {
-                              "bottom": 0,
-                              "left": 0,
-                              "position": "absolute",
-                              "right": 0,
-                              "top": 0,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 0,
-                        "width": 0,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    accessible={true}
-                    focusable={true}
-                    onClick={[Function]}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "aspectRatio": 1.7777777777777777,
-                        "backgroundColor": "white",
-                        "borderRadius": 9,
-                        "marginLeft": 4,
-                        "marginRight": 4,
-                        "opacity": 1,
-                        "overflow": "hidden",
-                      }
-                    }
-                    testID="carrousel-item"
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#252525",
-                          "borderRadius": 8,
-                        }
-                      }
-                    >
-                      <ActivityIndicator
-                        animating={true}
-                        color="#999999"
-                        hidesWhenStopped={true}
-                        size="small"
-                        style={
-                          Object {
-                            "left": "50%",
-                            "marginLeft": -8,
-                            "marginTop": -8,
-                            "position": "absolute",
-                            "top": "50%",
-                          }
-                        }
-                        testID="image-loader"
-                      />
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "overflow": "hidden",
-                            },
-                            Object {
-                              "height": "100%",
-                              "width": "100%",
-                            },
-                          ]
-                        }
-                      >
-                        <FastImageView
-                          onFastImageLoadEnd={[Function]}
-                          resizeMode="cover"
-                          source={
-                            Object {
-                              "uri": "https://pm1.narvii.com/6572/5df87ba23f32b6e901f5ee13427c2294f6d6a396_hq.jpg",
-                            }
-                          }
-                          style={
-                            Object {
-                              "bottom": 0,
-                              "left": 0,
-                              "position": "absolute",
-                              "right": 0,
-                              "top": 0,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 0,
-                        "width": 0,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    accessible={true}
-                    focusable={true}
-                    onClick={[Function]}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "aspectRatio": 1.7777777777777777,
-                        "backgroundColor": "white",
-                        "borderRadius": 9,
-                        "marginLeft": 4,
-                        "marginRight": 4,
-                        "opacity": 1,
-                        "overflow": "hidden",
-                      }
-                    }
-                    testID="carrousel-item"
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#252525",
-                          "borderRadius": 8,
-                        }
-                      }
-                    >
-                      <ActivityIndicator
-                        animating={true}
-                        color="#999999"
-                        hidesWhenStopped={true}
-                        size="small"
-                        style={
-                          Object {
-                            "left": "50%",
-                            "marginLeft": -8,
-                            "marginTop": -8,
-                            "position": "absolute",
-                            "top": "50%",
-                          }
-                        }
-                        testID="image-loader"
-                      />
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "overflow": "hidden",
-                            },
-                            Object {
-                              "height": "100%",
-                              "width": "100%",
-                            },
-                          ]
-                        }
-                      >
-                        <FastImageView
-                          onFastImageLoadEnd={[Function]}
-                          resizeMode="cover"
-                          source={
-                            Object {
-                              "uri": "https://switchplayer.net/wp-content/uploads/2017/03/Nintendo-Switch-List-Banner-1.png",
-                            }
-                          }
-                          style={
-                            Object {
-                              "bottom": 0,
-                              "left": 0,
-                              "position": "absolute",
-                              "right": 0,
-                              "top": 0,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </RCTScrollView>
+              onPress={[Function]}
+            />
           </View>
-        </View>
-        <View
-          onLayout={[Function]}
-          style={null}
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "flexDirection": "row",
-                },
-                Object {
-                  "justifyContent": "space-between",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "width": "48.4%",
-                  },
-                ]
-              }
-            >
-              <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-                testID="game-list-item"
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                      Object {
-                        "display": "flex",
-                      },
-                      Object {
-                        "alignItems": undefined,
-                        "flexDirection": "column",
-                        "justifyContent": undefined,
-                      },
-                    ]
-                  }
-                  testID="stack-view"
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#252525",
-                        "borderRadius": 8,
-                      }
-                    }
-                  >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#999999"
-                      hidesWhenStopped={true}
-                      size="small"
-                      style={
-                        Object {
-                          "left": "50%",
-                          "marginLeft": -8,
-                          "marginTop": -8,
-                          "position": "absolute",
-                          "top": "50%",
-                        }
-                      }
-                      testID="image-loader"
-                    />
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "overflow": "hidden",
-                          },
-                          Object {
-                            "aspectRatio": 1,
-                            "borderRadius": 8,
-                          },
-                        ]
-                      }
-                    >
-                      <FastImageView
-                        onFastImageLoadEnd={[Function]}
-                        resizeMode="cover"
-                        source={
-                          Object {
-                            "uri": "https://www.nintenderos.com/wp-content/uploads/2018/08/the-legend-of-zelda-breath-of-the-wild.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 8,
-                        "width": 8,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    style={
-                      Array [
-                        undefined,
-                        Object {
-                          "display": "flex",
-                        },
-                        Object {
-                          "alignItems": undefined,
-                          "flexDirection": "column",
-                          "justifyContent": undefined,
-                        },
-                      ]
-                    }
-                    testID="stack-view"
-                  >
-                    <Text
-                      accessibilityLabel="Nintendo"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                          },
-                        ]
-                      }
-                      testID="producer"
-                    >
-                      Nintendo
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="Zelda Breath of The Wild"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="title"
-                    >
-                      Zelda Breath of The Wild
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="For R$ 350,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "color": "#0091FF",
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="price"
-                    >
-                      R$ 350,00
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "width": "48.4%",
-                  },
-                ]
-              }
-            >
-              <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-                testID="game-list-item"
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                      Object {
-                        "display": "flex",
-                      },
-                      Object {
-                        "alignItems": undefined,
-                        "flexDirection": "column",
-                        "justifyContent": undefined,
-                      },
-                    ]
-                  }
-                  testID="stack-view"
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#252525",
-                        "borderRadius": 8,
-                      }
-                    }
-                  >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#999999"
-                      hidesWhenStopped={true}
-                      size="small"
-                      style={
-                        Object {
-                          "left": "50%",
-                          "marginLeft": -8,
-                          "marginTop": -8,
-                          "position": "absolute",
-                          "top": "50%",
-                        }
-                      }
-                      testID="image-loader"
-                    />
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "overflow": "hidden",
-                          },
-                          Object {
-                            "aspectRatio": 1,
-                            "borderRadius": 8,
-                          },
-                        ]
-                      }
-                    >
-                      <FastImageView
-                        onFastImageLoadEnd={[Function]}
-                        resizeMode="cover"
-                        source={
-                          Object {
-                            "uri": "https://cdn.inprnt.com/thumbs/38/e3/38e3dc31c478be4b290744acc17cbc0c.jpg?response-cache-control=max-age=2628000",
-                          }
-                        }
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 8,
-                        "width": 8,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    style={
-                      Array [
-                        undefined,
-                        Object {
-                          "display": "flex",
-                        },
-                        Object {
-                          "alignItems": undefined,
-                          "flexDirection": "column",
-                          "justifyContent": undefined,
-                        },
-                      ]
-                    }
-                    testID="stack-view"
-                  >
-                    <Text
-                      accessibilityLabel="Nintendo"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                          },
-                        ]
-                      }
-                      testID="producer"
-                    >
-                      Nintendo
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="Super Metroid"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="title"
-                    >
-                      Super Metroid
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="To de R$ 200,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                            "textDecorationLine": "line-through",
-                          },
-                        ]
-                      }
-                      testID="old_price"
-                    >
-                      de R$ 200,00
-                    </Text>
-                    <Text
-                      accessibilityLabel="For R$ 100,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "color": "#0091FF",
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="price"
-                    >
-                      R$ 100,00
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "height": 32,
-              }
-            }
-          />
-        </View>
-        <View
-          onLayout={[Function]}
-          style={null}
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "flexDirection": "row",
-                },
-                Object {
-                  "justifyContent": "space-between",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "width": "48.4%",
-                  },
-                ]
-              }
-            >
-              <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-                testID="game-list-item"
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                      Object {
-                        "display": "flex",
-                      },
-                      Object {
-                        "alignItems": undefined,
-                        "flexDirection": "column",
-                        "justifyContent": undefined,
-                      },
-                    ]
-                  }
-                  testID="stack-view"
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#252525",
-                        "borderRadius": 8,
-                      }
-                    }
-                  >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#999999"
-                      hidesWhenStopped={true}
-                      size="small"
-                      style={
-                        Object {
-                          "left": "50%",
-                          "marginLeft": -8,
-                          "marginTop": -8,
-                          "position": "absolute",
-                          "top": "50%",
-                        }
-                      }
-                      testID="image-loader"
-                    />
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "overflow": "hidden",
-                          },
-                          Object {
-                            "aspectRatio": 1,
-                            "borderRadius": 8,
-                          },
-                        ]
-                      }
-                    >
-                      <FastImageView
-                        onFastImageLoadEnd={[Function]}
-                        resizeMode="cover"
-                        source={
-                          Object {
-                            "uri": "https://img.ibxk.com.br/2018/08/15/15121619540042.jpg?w=704&h=264&mode=crop&scale=both",
-                          }
-                        }
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 8,
-                        "width": 8,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    style={
-                      Array [
-                        undefined,
-                        Object {
-                          "display": "flex",
-                        },
-                        Object {
-                          "alignItems": undefined,
-                          "flexDirection": "column",
-                          "justifyContent": undefined,
-                        },
-                      ]
-                    }
-                    testID="stack-view"
-                  >
-                    <Text
-                      accessibilityLabel="Nintendo"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                          },
-                        ]
-                      }
-                      testID="producer"
-                    >
-                      Nintendo
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="Hollow Night"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="title"
-                    >
-                      Hollow Night
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="To de R$ 350,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                            "textDecorationLine": "line-through",
-                          },
-                        ]
-                      }
-                      testID="old_price"
-                    >
-                      de R$ 350,00
-                    </Text>
-                    <Text
-                      accessibilityLabel="For Grátis"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "color": "#0091FF",
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="price"
-                    >
-                      Grátis
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "width": "48.4%",
-                  },
-                ]
-              }
-            >
-              <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-                testID="game-list-item"
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                      Object {
-                        "display": "flex",
-                      },
-                      Object {
-                        "alignItems": undefined,
-                        "flexDirection": "column",
-                        "justifyContent": undefined,
-                      },
-                    ]
-                  }
-                  testID="stack-view"
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#252525",
-                        "borderRadius": 8,
-                      }
-                    }
-                  >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#999999"
-                      hidesWhenStopped={true}
-                      size="small"
-                      style={
-                        Object {
-                          "left": "50%",
-                          "marginLeft": -8,
-                          "marginTop": -8,
-                          "position": "absolute",
-                          "top": "50%",
-                        }
-                      }
-                      testID="image-loader"
-                    />
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "overflow": "hidden",
-                          },
-                          Object {
-                            "aspectRatio": 1,
-                            "borderRadius": 8,
-                          },
-                        ]
-                      }
-                    >
-                      <FastImageView
-                        onFastImageLoadEnd={[Function]}
-                        resizeMode="cover"
-                        source={
-                          Object {
-                            "uri": "https://images-na.ssl-images-amazon.com/images/I/71h5dWJt+XL.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 8,
-                        "width": 8,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    style={
-                      Array [
-                        undefined,
-                        Object {
-                          "display": "flex",
-                        },
-                        Object {
-                          "alignItems": undefined,
-                          "flexDirection": "column",
-                          "justifyContent": undefined,
-                        },
-                      ]
-                    }
-                    testID="stack-view"
-                  >
-                    <Text
-                      accessibilityLabel="Nintendo"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                          },
-                        ]
-                      }
-                      testID="producer"
-                    >
-                      Nintendo
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="Donkey Kong"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="title"
-                    >
-                      Donkey Kong
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="To de R$ 250,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                            "textDecorationLine": "line-through",
-                          },
-                        ]
-                      }
-                      testID="old_price"
-                    >
-                      de R$ 250,00
-                    </Text>
-                    <Text
-                      accessibilityLabel="For R$ 150,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "color": "#0091FF",
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="price"
-                    >
-                      R$ 150,00
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "height": 32,
-              }
-            }
-          />
-        </View>
-        <View
-          onLayout={[Function]}
-          style={null}
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "flexDirection": "row",
-                },
-                Object {
-                  "justifyContent": "space-between",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "width": "48.4%",
-                  },
-                ]
-              }
-            >
-              <View
-                accessible={true}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-                testID="game-list-item"
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                      Object {
-                        "display": "flex",
-                      },
-                      Object {
-                        "alignItems": undefined,
-                        "flexDirection": "column",
-                        "justifyContent": undefined,
-                      },
-                    ]
-                  }
-                  testID="stack-view"
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#252525",
-                        "borderRadius": 8,
-                      }
-                    }
-                  >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#999999"
-                      hidesWhenStopped={true}
-                      size="small"
-                      style={
-                        Object {
-                          "left": "50%",
-                          "marginLeft": -8,
-                          "marginTop": -8,
-                          "position": "absolute",
-                          "top": "50%",
-                        }
-                      }
-                      testID="image-loader"
-                    />
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "overflow": "hidden",
-                          },
-                          Object {
-                            "aspectRatio": 1,
-                            "borderRadius": 8,
-                          },
-                        ]
-                      }
-                    >
-                      <FastImageView
-                        onFastImageLoadEnd={[Function]}
-                        resizeMode="cover"
-                        source={
-                          Object {
-                            "uri": "https://webtudo.net/wp-content/uploads/2017/03/Super-Mario-Bros.jpg",
-                          }
-                        }
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "height": 8,
-                        "width": 8,
-                      }
-                    }
-                    testID="stack-view-spacer"
-                  />
-                  <View
-                    style={
-                      Array [
-                        undefined,
-                        Object {
-                          "display": "flex",
-                        },
-                        Object {
-                          "alignItems": undefined,
-                          "flexDirection": "column",
-                          "justifyContent": undefined,
-                        },
-                      ]
-                    }
-                    testID="stack-view"
-                  >
-                    <Text
-                      accessibilityLabel="Nintendo"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                          },
-                        ]
-                      }
-                      testID="producer"
-                    >
-                      Nintendo
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="Super Mario All Stars Delux"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="title"
-                    >
-                      Super Mario All Stars Delux
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "height": 4,
-                          "width": 4,
-                        }
-                      }
-                      testID="stack-view-spacer"
-                    />
-                    <Text
-                      accessibilityLabel="To de R$ 350,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "fontSize": 12,
-                            "textDecorationLine": "line-through",
-                          },
-                        ]
-                      }
-                      testID="old_price"
-                    >
-                      de R$ 350,00
-                    </Text>
-                    <Text
-                      accessibilityLabel="For R$ 250,00"
-                      style={
-                        Array [
-                          Object {
-                            "color": "white",
-                            "fontSize": 17,
-                          },
-                          Object {
-                            "color": "#0091FF",
-                            "fontWeight": "bold",
-                          },
-                        ]
-                      }
-                      testID="price"
-                    >
-                      R$ 250,00
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View
-          style={
+        }
+        data={
+          Array [
             Object {
-              "height": 0,
+              "imageURL": "https://www.nintenderos.com/wp-content/uploads/2018/08/the-legend-of-zelda-breath-of-the-wild.jpg",
+              "price": Object {
+                "discount": 0,
+                "price": 350,
+              },
+              "producer": "Nintendo",
+              "title": "Zelda Breath of The Wild",
+            },
+            Object {
+              "imageURL": "https://cdn.inprnt.com/thumbs/38/e3/38e3dc31c478be4b290744acc17cbc0c.jpg?response-cache-control=max-age=2628000",
+              "price": Object {
+                "discount": 100,
+                "price": 200,
+              },
+              "producer": "Nintendo",
+              "title": "Super Metroid",
+            },
+            Object {
+              "imageURL": "https://img.ibxk.com.br/2018/08/15/15121619540042.jpg?w=704&h=264&mode=crop&scale=both",
+              "price": Object {
+                "discount": 400,
+                "price": 350,
+              },
+              "producer": "Nintendo",
+              "title": "Hollow Night",
+            },
+            Object {
+              "imageURL": "https://images-na.ssl-images-amazon.com/images/I/71h5dWJt+XL.jpg",
+              "price": Object {
+                "discount": 100,
+                "price": 250,
+              },
+              "producer": "Nintendo",
+              "title": "Donkey Kong",
+            },
+            Object {
+              "imageURL": "https://webtudo.net/wp-content/uploads/2017/03/Super-Mario-Bros.jpg",
+              "price": Object {
+                "discount": 100,
+                "price": 350,
+              },
+              "producer": "Nintendo",
+              "title": "Super Mario All Stars Delux",
+            },
+          ]
+        }
+        disableVirtualization={false}
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        onContentSizeChange={[Function]}
+        onEndReachedThreshold={2}
+        onLayout={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        showsVerticalScrollIndicator={false}
+        stickyHeaderIndices={Array []}
+        style={
+          Array [
+            undefined,
+            Object {
+              "overflow": "visible",
+            },
+          ]
+        }
+        testID="game-list"
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+          >
+            <View
+              style={
+                Object {
+                  "marginBottom": 32,
+                }
+              }
+            >
+              <RCTScrollView
+                horizontal={true}
+                pagingEnabled={true}
+                showsHorizontalScrollIndicator={false}
+                style={
+                  Object {
+                    "aspectRatio": 1.7777777777777777,
+                    "marginLeft": -4,
+                    "marginRight": -4,
+                    "overflow": "visible",
+                  }
+                }
+                testID="carrousel"
+              >
+                <View>
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "width": "100%",
+                        },
+                        Object {
+                          "display": "flex",
+                        },
+                        Object {
+                          "alignItems": undefined,
+                          "flexDirection": "row",
+                          "justifyContent": undefined,
+                        },
+                      ]
+                    }
+                    testID="stack-view"
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "aspectRatio": 1.7777777777777777,
+                          "backgroundColor": "white",
+                          "borderRadius": 9,
+                          "marginLeft": 4,
+                          "marginRight": 4,
+                          "opacity": 1,
+                          "overflow": "hidden",
+                        }
+                      }
+                      testID="carrousel-item"
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#252525",
+                            "borderRadius": 8,
+                          }
+                        }
+                      >
+                        <ActivityIndicator
+                          animating={true}
+                          color="#999999"
+                          hidesWhenStopped={true}
+                          size="small"
+                          style={
+                            Object {
+                              "left": "50%",
+                              "marginLeft": -8,
+                              "marginTop": -8,
+                              "position": "absolute",
+                              "top": "50%",
+                            }
+                          }
+                          testID="image-loader"
+                        />
+                        <View
+                          style={
+                            Array [
+                              Object {
+                                "overflow": "hidden",
+                              },
+                              Object {
+                                "height": "100%",
+                                "width": "100%",
+                              },
+                            ]
+                          }
+                        >
+                          <FastImageView
+                            onFastImageLoadEnd={[Function]}
+                            resizeMode="cover"
+                            source={
+                              Object {
+                                "uri": "https://images.tcdn.com.br/img/img_prod/654759/1555707974_banner-cat-switch.png",
+                              }
+                            }
+                            style={
+                              Object {
+                                "bottom": 0,
+                                "left": 0,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 0,
+                          "width": 0,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "aspectRatio": 1.7777777777777777,
+                          "backgroundColor": "white",
+                          "borderRadius": 9,
+                          "marginLeft": 4,
+                          "marginRight": 4,
+                          "opacity": 1,
+                          "overflow": "hidden",
+                        }
+                      }
+                      testID="carrousel-item"
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#252525",
+                            "borderRadius": 8,
+                          }
+                        }
+                      >
+                        <ActivityIndicator
+                          animating={true}
+                          color="#999999"
+                          hidesWhenStopped={true}
+                          size="small"
+                          style={
+                            Object {
+                              "left": "50%",
+                              "marginLeft": -8,
+                              "marginTop": -8,
+                              "position": "absolute",
+                              "top": "50%",
+                            }
+                          }
+                          testID="image-loader"
+                        />
+                        <View
+                          style={
+                            Array [
+                              Object {
+                                "overflow": "hidden",
+                              },
+                              Object {
+                                "height": "100%",
+                                "width": "100%",
+                              },
+                            ]
+                          }
+                        >
+                          <FastImageView
+                            onFastImageLoadEnd={[Function]}
+                            resizeMode="cover"
+                            source={
+                              Object {
+                                "uri": "https://pm1.narvii.com/6572/5df87ba23f32b6e901f5ee13427c2294f6d6a396_hq.jpg",
+                              }
+                            }
+                            style={
+                              Object {
+                                "bottom": 0,
+                                "left": 0,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 0,
+                          "width": 0,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "aspectRatio": 1.7777777777777777,
+                          "backgroundColor": "white",
+                          "borderRadius": 9,
+                          "marginLeft": 4,
+                          "marginRight": 4,
+                          "opacity": 1,
+                          "overflow": "hidden",
+                        }
+                      }
+                      testID="carrousel-item"
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#252525",
+                            "borderRadius": 8,
+                          }
+                        }
+                      >
+                        <ActivityIndicator
+                          animating={true}
+                          color="#999999"
+                          hidesWhenStopped={true}
+                          size="small"
+                          style={
+                            Object {
+                              "left": "50%",
+                              "marginLeft": -8,
+                              "marginTop": -8,
+                              "position": "absolute",
+                              "top": "50%",
+                            }
+                          }
+                          testID="image-loader"
+                        />
+                        <View
+                          style={
+                            Array [
+                              Object {
+                                "overflow": "hidden",
+                              },
+                              Object {
+                                "height": "100%",
+                                "width": "100%",
+                              },
+                            ]
+                          }
+                        >
+                          <FastImageView
+                            onFastImageLoadEnd={[Function]}
+                            resizeMode="cover"
+                            source={
+                              Object {
+                                "uri": "https://switchplayer.net/wp-content/uploads/2017/03/Nintendo-Switch-List-Banner-1.png",
+                              }
+                            }
+                            style={
+                              Object {
+                                "bottom": 0,
+                                "left": 0,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </RCTScrollView>
+            </View>
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                  Object {
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "width": "48.4%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  testID="game-list-item"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {},
+                        Object {
+                          "display": "flex",
+                        },
+                        Object {
+                          "alignItems": undefined,
+                          "flexDirection": "column",
+                          "justifyContent": undefined,
+                        },
+                      ]
+                    }
+                    testID="stack-view"
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#252525",
+                          "borderRadius": 8,
+                        }
+                      }
+                    >
+                      <ActivityIndicator
+                        animating={true}
+                        color="#999999"
+                        hidesWhenStopped={true}
+                        size="small"
+                        style={
+                          Object {
+                            "left": "50%",
+                            "marginLeft": -8,
+                            "marginTop": -8,
+                            "position": "absolute",
+                            "top": "50%",
+                          }
+                        }
+                        testID="image-loader"
+                      />
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "overflow": "hidden",
+                            },
+                            Object {
+                              "aspectRatio": 1,
+                              "borderRadius": 8,
+                            },
+                          ]
+                        }
+                      >
+                        <FastImageView
+                          onFastImageLoadEnd={[Function]}
+                          resizeMode="cover"
+                          source={
+                            Object {
+                              "uri": "https://www.nintenderos.com/wp-content/uploads/2018/08/the-legend-of-zelda-breath-of-the-wild.jpg",
+                            }
+                          }
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 8,
+                          "width": 8,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          Object {
+                            "display": "flex",
+                          },
+                          Object {
+                            "alignItems": undefined,
+                            "flexDirection": "column",
+                            "justifyContent": undefined,
+                          },
+                        ]
+                      }
+                      testID="stack-view"
+                    >
+                      <Text
+                        accessibilityLabel="Nintendo"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                            },
+                          ]
+                        }
+                        testID="producer"
+                      >
+                        Nintendo
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="Zelda Breath of The Wild"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="title"
+                      >
+                        Zelda Breath of The Wild
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="For R$ 350,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "color": "#0091FF",
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="price"
+                      >
+                        R$ 350,00
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "width": "48.4%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  testID="game-list-item"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {},
+                        Object {
+                          "display": "flex",
+                        },
+                        Object {
+                          "alignItems": undefined,
+                          "flexDirection": "column",
+                          "justifyContent": undefined,
+                        },
+                      ]
+                    }
+                    testID="stack-view"
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#252525",
+                          "borderRadius": 8,
+                        }
+                      }
+                    >
+                      <ActivityIndicator
+                        animating={true}
+                        color="#999999"
+                        hidesWhenStopped={true}
+                        size="small"
+                        style={
+                          Object {
+                            "left": "50%",
+                            "marginLeft": -8,
+                            "marginTop": -8,
+                            "position": "absolute",
+                            "top": "50%",
+                          }
+                        }
+                        testID="image-loader"
+                      />
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "overflow": "hidden",
+                            },
+                            Object {
+                              "aspectRatio": 1,
+                              "borderRadius": 8,
+                            },
+                          ]
+                        }
+                      >
+                        <FastImageView
+                          onFastImageLoadEnd={[Function]}
+                          resizeMode="cover"
+                          source={
+                            Object {
+                              "uri": "https://cdn.inprnt.com/thumbs/38/e3/38e3dc31c478be4b290744acc17cbc0c.jpg?response-cache-control=max-age=2628000",
+                            }
+                          }
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 8,
+                          "width": 8,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          Object {
+                            "display": "flex",
+                          },
+                          Object {
+                            "alignItems": undefined,
+                            "flexDirection": "column",
+                            "justifyContent": undefined,
+                          },
+                        ]
+                      }
+                      testID="stack-view"
+                    >
+                      <Text
+                        accessibilityLabel="Nintendo"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                            },
+                          ]
+                        }
+                        testID="producer"
+                      >
+                        Nintendo
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="Super Metroid"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="title"
+                      >
+                        Super Metroid
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="To de R$ 200,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                              "textDecorationLine": "line-through",
+                            },
+                          ]
+                        }
+                        testID="old_price"
+                      >
+                        de R$ 200,00
+                      </Text>
+                      <Text
+                        accessibilityLabel="For R$ 100,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "color": "#0091FF",
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="price"
+                      >
+                        R$ 100,00
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "height": 32,
+                }
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                  Object {
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "width": "48.4%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  testID="game-list-item"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {},
+                        Object {
+                          "display": "flex",
+                        },
+                        Object {
+                          "alignItems": undefined,
+                          "flexDirection": "column",
+                          "justifyContent": undefined,
+                        },
+                      ]
+                    }
+                    testID="stack-view"
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#252525",
+                          "borderRadius": 8,
+                        }
+                      }
+                    >
+                      <ActivityIndicator
+                        animating={true}
+                        color="#999999"
+                        hidesWhenStopped={true}
+                        size="small"
+                        style={
+                          Object {
+                            "left": "50%",
+                            "marginLeft": -8,
+                            "marginTop": -8,
+                            "position": "absolute",
+                            "top": "50%",
+                          }
+                        }
+                        testID="image-loader"
+                      />
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "overflow": "hidden",
+                            },
+                            Object {
+                              "aspectRatio": 1,
+                              "borderRadius": 8,
+                            },
+                          ]
+                        }
+                      >
+                        <FastImageView
+                          onFastImageLoadEnd={[Function]}
+                          resizeMode="cover"
+                          source={
+                            Object {
+                              "uri": "https://img.ibxk.com.br/2018/08/15/15121619540042.jpg?w=704&h=264&mode=crop&scale=both",
+                            }
+                          }
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 8,
+                          "width": 8,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          Object {
+                            "display": "flex",
+                          },
+                          Object {
+                            "alignItems": undefined,
+                            "flexDirection": "column",
+                            "justifyContent": undefined,
+                          },
+                        ]
+                      }
+                      testID="stack-view"
+                    >
+                      <Text
+                        accessibilityLabel="Nintendo"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                            },
+                          ]
+                        }
+                        testID="producer"
+                      >
+                        Nintendo
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="Hollow Night"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="title"
+                      >
+                        Hollow Night
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="To de R$ 350,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                              "textDecorationLine": "line-through",
+                            },
+                          ]
+                        }
+                        testID="old_price"
+                      >
+                        de R$ 350,00
+                      </Text>
+                      <Text
+                        accessibilityLabel="For Grátis"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "color": "#0091FF",
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="price"
+                      >
+                        Grátis
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "width": "48.4%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  testID="game-list-item"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {},
+                        Object {
+                          "display": "flex",
+                        },
+                        Object {
+                          "alignItems": undefined,
+                          "flexDirection": "column",
+                          "justifyContent": undefined,
+                        },
+                      ]
+                    }
+                    testID="stack-view"
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#252525",
+                          "borderRadius": 8,
+                        }
+                      }
+                    >
+                      <ActivityIndicator
+                        animating={true}
+                        color="#999999"
+                        hidesWhenStopped={true}
+                        size="small"
+                        style={
+                          Object {
+                            "left": "50%",
+                            "marginLeft": -8,
+                            "marginTop": -8,
+                            "position": "absolute",
+                            "top": "50%",
+                          }
+                        }
+                        testID="image-loader"
+                      />
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "overflow": "hidden",
+                            },
+                            Object {
+                              "aspectRatio": 1,
+                              "borderRadius": 8,
+                            },
+                          ]
+                        }
+                      >
+                        <FastImageView
+                          onFastImageLoadEnd={[Function]}
+                          resizeMode="cover"
+                          source={
+                            Object {
+                              "uri": "https://images-na.ssl-images-amazon.com/images/I/71h5dWJt+XL.jpg",
+                            }
+                          }
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 8,
+                          "width": 8,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          Object {
+                            "display": "flex",
+                          },
+                          Object {
+                            "alignItems": undefined,
+                            "flexDirection": "column",
+                            "justifyContent": undefined,
+                          },
+                        ]
+                      }
+                      testID="stack-view"
+                    >
+                      <Text
+                        accessibilityLabel="Nintendo"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                            },
+                          ]
+                        }
+                        testID="producer"
+                      >
+                        Nintendo
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="Donkey Kong"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="title"
+                      >
+                        Donkey Kong
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="To de R$ 250,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                              "textDecorationLine": "line-through",
+                            },
+                          ]
+                        }
+                        testID="old_price"
+                      >
+                        de R$ 250,00
+                      </Text>
+                      <Text
+                        accessibilityLabel="For R$ 150,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "color": "#0091FF",
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="price"
+                      >
+                        R$ 150,00
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "height": 32,
+                }
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                  Object {
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "width": "48.4%",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  focusable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  testID="game-list-item"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {},
+                        Object {
+                          "display": "flex",
+                        },
+                        Object {
+                          "alignItems": undefined,
+                          "flexDirection": "column",
+                          "justifyContent": undefined,
+                        },
+                      ]
+                    }
+                    testID="stack-view"
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#252525",
+                          "borderRadius": 8,
+                        }
+                      }
+                    >
+                      <ActivityIndicator
+                        animating={true}
+                        color="#999999"
+                        hidesWhenStopped={true}
+                        size="small"
+                        style={
+                          Object {
+                            "left": "50%",
+                            "marginLeft": -8,
+                            "marginTop": -8,
+                            "position": "absolute",
+                            "top": "50%",
+                          }
+                        }
+                        testID="image-loader"
+                      />
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "overflow": "hidden",
+                            },
+                            Object {
+                              "aspectRatio": 1,
+                              "borderRadius": 8,
+                            },
+                          ]
+                        }
+                      >
+                        <FastImageView
+                          onFastImageLoadEnd={[Function]}
+                          resizeMode="cover"
+                          source={
+                            Object {
+                              "uri": "https://webtudo.net/wp-content/uploads/2017/03/Super-Mario-Bros.jpg",
+                            }
+                          }
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "height": 8,
+                          "width": 8,
+                        }
+                      }
+                      testID="stack-view-spacer"
+                    />
+                    <View
+                      style={
+                        Array [
+                          undefined,
+                          Object {
+                            "display": "flex",
+                          },
+                          Object {
+                            "alignItems": undefined,
+                            "flexDirection": "column",
+                            "justifyContent": undefined,
+                          },
+                        ]
+                      }
+                      testID="stack-view"
+                    >
+                      <Text
+                        accessibilityLabel="Nintendo"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                            },
+                          ]
+                        }
+                        testID="producer"
+                      >
+                        Nintendo
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="Super Mario All Stars Delux"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="title"
+                      >
+                        Super Mario All Stars Delux
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "height": 4,
+                            "width": 4,
+                          }
+                        }
+                        testID="stack-view-spacer"
+                      />
+                      <Text
+                        accessibilityLabel="To de R$ 350,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "fontSize": 12,
+                              "textDecorationLine": "line-through",
+                            },
+                          ]
+                        }
+                        testID="old_price"
+                      >
+                        de R$ 350,00
+                      </Text>
+                      <Text
+                        accessibilityLabel="For R$ 250,00"
+                        style={
+                          Array [
+                            Object {
+                              "color": "white",
+                              "fontSize": 17,
+                            },
+                            Object {
+                              "color": "#0091FF",
+                              "fontWeight": "bold",
+                            },
+                          ]
+                        }
+                        testID="price"
+                      >
+                        R$ 250,00
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "height": 0,
+              }
             }
-          }
-        />
-      </View>
-    </RCTScrollView>
-    <View
-      style={
-        Object {
-          "height": 32,
-          "width": 32,
-        }
-      }
-      testID="stack-view-spacer"
-    />
-    <View
-      accessible={true}
-      focusable={false}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "aspectRatio": 1,
-          "backgroundColor": "red",
-          "borderRadius": 100,
-          "bottom": 20,
-          "justifyContent": "center",
-          "opacity": 1,
-          "position": "absolute",
-          "right": 40,
-          "shadowColor": "black",
-          "shadowOffset": Object {
-            "height": 4,
-            "width": 4,
-          },
-          "shadowOpacity": 0.4,
-          "shadowRadius": 10,
-          "width": "20%",
-        }
-      }
-    >
-      <SvgMock
-        height="50%"
-        width="50%"
-      />
+          />
+        </View>
+      </RCTScrollView>
       <View
         style={
           Object {
+            "height": 32,
+            "width": 32,
+          }
+        }
+        testID="stack-view-spacer"
+      />
+      <View
+        accessible={true}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
             "aspectRatio": 1,
-            "backgroundColor": "white",
-            "borderRadius": 13,
+            "backgroundColor": "red",
+            "borderRadius": 100,
+            "bottom": 40,
             "justifyContent": "center",
+            "opacity": 1,
             "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": 26,
+            "right": 20,
+            "shadowColor": "black",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": 4,
+            },
+            "shadowOpacity": 0.4,
+            "shadowRadius": 10,
+            "width": "20%",
           }
         }
       >
-        <Text
+        <SvgMock
+          height="50%"
+          width="50%"
+        />
+        <View
           style={
-            Array [
-              Object {
-                "color": "white",
-                "fontSize": 17,
-              },
-              Object {
-                "color": "black",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "textAlign": "center",
-              },
-            ]
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "white",
+              "borderRadius": 13,
+              "justifyContent": "center",
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 26,
+            }
           }
         >
-          9+
-        </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 17,
+                },
+                Object {
+                  "color": "black",
+                  "fontSize": 12,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            9+
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
-</RCTSafeAreaView>
+  </RCTSafeAreaView>
+</View>
 `;
