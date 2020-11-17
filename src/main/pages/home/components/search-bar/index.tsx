@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, StyleProp, ViewStyle} from 'react-native';
+
 import {StackView} from '../../../../components';
+import Assets from './../../../../../assets';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
@@ -8,6 +10,8 @@ type Props = {
 };
 
 const SearchBar = ({style, onPress}: Props) => {
+  const {SearchIcon} = Assets.icons;
+
   return (
     <View testID="search-bar" style={[styles.container, style]}>
       <StackView direction="row" spacing={16}>
@@ -15,6 +19,7 @@ const SearchBar = ({style, onPress}: Props) => {
           style={styles.placeholder}
           placeholder="Informe o termo de busca"
         />
+        <SearchIcon width={20} height={20} />
       </StackView>
     </View>
   );

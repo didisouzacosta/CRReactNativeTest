@@ -8,16 +8,18 @@ import {
 } from 'react-native';
 
 import {Text} from './../../../../components';
+import Assets from './../../../../../assets';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
-  children?: JSX.Element;
 };
 
-const CartButton = ({style, children}: Props) => {
+const CartButton = ({style}: Props) => {
+  const {ShoppingCartIcon} = Assets.icons;
+
   return (
     <TouchableOpacity activeOpacity={0.9} style={[style, styles.container]}>
-      {children}
+      <ShoppingCartIcon width="50%" height="50%" />
       <View style={styles.badge}>
         <Text style={styles.badgeCount}>9+</Text>
       </View>
@@ -35,6 +37,8 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 4, height: 4},
     shadowOpacity: 0.4,
     shadowRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   badge: {
     justifyContent: 'center',
@@ -43,6 +47,7 @@ const styles = StyleSheet.create({
     width: 26,
     aspectRatio: 1,
     borderRadius: 13,
+    top: 0,
     right: 0,
   },
   badgeCount: {
