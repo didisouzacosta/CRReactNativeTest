@@ -423,7 +423,7 @@ exports[`Game List Item renders correctly 1`] = `
                 testID="stack-view"
               >
                 <Text
-                  accessibilityLabel="Producer"
+                  accessibilityLabel="Nintendo"
                   style={
                     Array [
                       Object {
@@ -449,7 +449,7 @@ exports[`Game List Item renders correctly 1`] = `
                   testID="stack-view-spacer"
                 />
                 <Text
-                  accessibilityLabel="Title"
+                  accessibilityLabel="Zelda"
                   style={
                     Array [
                       Object {
@@ -475,7 +475,7 @@ exports[`Game List Item renders correctly 1`] = `
                   testID="stack-view-spacer"
                 />
                 <Text
-                  accessibilityLabel="Old price"
+                  accessibilityLabel="To de R$ 100,00"
                   style={
                     Array [
                       Object {
@@ -493,7 +493,7 @@ exports[`Game List Item renders correctly 1`] = `
                   de R$ 100,00
                 </Text>
                 <Text
-                  accessibilityLabel="Price"
+                  accessibilityLabel="For R$ 90,00"
                   style={
                     Array [
                       Object {
@@ -639,7 +639,7 @@ exports[`Game List Item renders correctly 1`] = `
                 testID="stack-view"
               >
                 <Text
-                  accessibilityLabel="Producer"
+                  accessibilityLabel="Data East"
                   style={
                     Array [
                       Object {
@@ -665,7 +665,7 @@ exports[`Game List Item renders correctly 1`] = `
                   testID="stack-view-spacer"
                 />
                 <Text
-                  accessibilityLabel="Title"
+                  accessibilityLabel="Side Pocket"
                   style={
                     Array [
                       Object {
@@ -691,7 +691,7 @@ exports[`Game List Item renders correctly 1`] = `
                   testID="stack-view-spacer"
                 />
                 <Text
-                  accessibilityLabel="Price"
+                  accessibilityLabel="For R$ 450,00"
                   style={
                     Array [
                       Object {

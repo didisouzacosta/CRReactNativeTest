@@ -655,7 +655,7 @@ exports[`Home Page renders correctly 1`] = `
                     testID="stack-view"
                   >
                     <Text
-                      accessibilityLabel="Producer"
+                      accessibilityLabel="Nintendo"
                       style={
                         Array [
                           Object {
@@ -681,7 +681,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Title"
+                      accessibilityLabel="Zelda Breath of The Wild"
                       style={
                         Array [
                           Object {
@@ -707,7 +707,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Price"
+                      accessibilityLabel="For R$ 350,00"
                       style={
                         Array [
                           Object {
@@ -853,7 +853,7 @@ exports[`Home Page renders correctly 1`] = `
                     testID="stack-view"
                   >
                     <Text
-                      accessibilityLabel="Producer"
+                      accessibilityLabel="Nintendo"
                       style={
                         Array [
                           Object {
@@ -879,7 +879,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Title"
+                      accessibilityLabel="Super Metroid"
                       style={
                         Array [
                           Object {
@@ -905,7 +905,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Old price"
+                      accessibilityLabel="To de R$ 200,00"
                       style={
                         Array [
                           Object {
@@ -923,7 +923,7 @@ exports[`Home Page renders correctly 1`] = `
                       de R$ 200,00
                     </Text>
                     <Text
-                      accessibilityLabel="Price"
+                      accessibilityLabel="For R$ 100,00"
                       style={
                         Array [
                           Object {
@@ -1094,7 +1094,7 @@ exports[`Home Page renders correctly 1`] = `
                     testID="stack-view"
                   >
                     <Text
-                      accessibilityLabel="Producer"
+                      accessibilityLabel="Nintendo"
                       style={
                         Array [
                           Object {
@@ -1120,7 +1120,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Title"
+                      accessibilityLabel="Hollow Night"
                       style={
                         Array [
                           Object {
@@ -1146,7 +1146,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Old price"
+                      accessibilityLabel="To de R$ 350,00"
                       style={
                         Array [
                           Object {
@@ -1164,7 +1164,7 @@ exports[`Home Page renders correctly 1`] = `
                       de R$ 350,00
                     </Text>
                     <Text
-                      accessibilityLabel="Price"
+                      accessibilityLabel="For Grátis"
                       style={
                         Array [
                           Object {
@@ -1310,7 +1310,7 @@ exports[`Home Page renders correctly 1`] = `
                     testID="stack-view"
                   >
                     <Text
-                      accessibilityLabel="Producer"
+                      accessibilityLabel="Nintendo"
                       style={
                         Array [
                           Object {
@@ -1336,7 +1336,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Title"
+                      accessibilityLabel="Donkey Kong"
                       style={
                         Array [
                           Object {
@@ -1362,7 +1362,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Old price"
+                      accessibilityLabel="To de R$ 250,00"
                       style={
                         Array [
                           Object {
@@ -1380,7 +1380,7 @@ exports[`Home Page renders correctly 1`] = `
                       de R$ 250,00
                     </Text>
                     <Text
-                      accessibilityLabel="Price"
+                      accessibilityLabel="For R$ 150,00"
                       style={
                         Array [
                           Object {
@@ -1551,7 +1551,7 @@ exports[`Home Page renders correctly 1`] = `
                     testID="stack-view"
                   >
                     <Text
-                      accessibilityLabel="Producer"
+                      accessibilityLabel="Nintendo"
                       style={
                         Array [
                           Object {
@@ -1577,7 +1577,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Title"
+                      accessibilityLabel="Super Mario All Stars Delux"
                       style={
                         Array [
                           Object {
@@ -1603,7 +1603,7 @@ exports[`Home Page renders correctly 1`] = `
                       testID="stack-view-spacer"
                     />
                     <Text
-                      accessibilityLabel="Old price"
+                      accessibilityLabel="To de R$ 350,00"
                       style={
                         Array [
                           Object {
@@ -1621,7 +1621,7 @@ exports[`Home Page renders correctly 1`] = `
                       de R$ 350,00
                     </Text>
                     <Text
-                      accessibilityLabel="Price"
+                      accessibilityLabel="For R$ 250,00"
                       style={
                         Array [
                           Object {
@@ -1691,7 +1691,40 @@ exports[`Home Page renders correctly 1`] = `
           "width": "20%",
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "white",
+            "borderRadius": 13,
+            "justifyContent": "center",
+            "position": "absolute",
+            "right": 0,
+            "width": 26,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontSize": 17,
+              },
+              Object {
+                "color": "black",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          9+
+        </Text>
+      </View>
+    </View>
   </View>
 </RCTSafeAreaView>
 `;
