@@ -3,9 +3,6 @@ import {render, fireEvent} from '@testing-library/react-native';
 
 import SearchBar from './';
 
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
-jest.useFakeTimers();
-
 describe('Search Bar', () => {
   it('ensure search bar text input props consistency', () => {
     const mockOnChangeTextFunc = jest.fn();
