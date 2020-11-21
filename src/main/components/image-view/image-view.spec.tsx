@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, waitForElementToBeRemoved} from '@testing-library/react-native';
 
-import ImageView from './';
+import ImageView from '.';
 
 describe('ImageView', () => {
   it('renders correctly', () => {

@@ -71,12 +71,9 @@ describe('Game List Item', () => {
 
     const {getByTestId} = render(<GameListItem game={game} />);
 
-    try {
-      getByTestId('old_price');
-      fail();
-    } catch (e) {
-      expect(e.message).toBe('No instances found with testID: old_price');
-    }
+    expect(() => getByTestId('old_price')).toThrowError(
+      'No instances found with testID: old_price',
+    );
   });
 
   it('must be not display old price if discount is zero', () => {
@@ -91,12 +88,8 @@ describe('Game List Item', () => {
     const price = getByTestId('price');
 
     expect(price.children[0]).toBe('R$\xa0900,00');
-
-    try {
-      getByTestId('old_price');
-      fail();
-    } catch (e) {
-      expect(e.message).toBe('No instances found with testID: old_price');
-    }
+    expect(() => getByTestId('old_price')).toThrowError(
+      'No instances found with testID: old_price',
+    );
   });
 });

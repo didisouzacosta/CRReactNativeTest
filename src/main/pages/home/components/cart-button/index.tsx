@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 
-import Text from './../../../../components/typography/text';
+import Text from '../../../../components/typography/text';
 import Assets from './../../../../../assets';
 
 type Props = {

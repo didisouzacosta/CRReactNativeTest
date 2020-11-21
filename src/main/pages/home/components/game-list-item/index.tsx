@@ -5,7 +5,7 @@ import {Game} from '../../../../../domain/types';
 import StackView from '../../../../components/stack-view';
 import Text from '../../../../components/typography/text';
 import ImageView from '../../../../components/image-view';
-import GamePriceProvider from '../../../../providers/game-price-privider';
+import GamePriceProvider from '../../../../providers/game-price-provider';
 
 type Props = {
   game: Game;

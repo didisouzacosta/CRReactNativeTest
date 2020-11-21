@@ -17,7 +17,9 @@ const GamePriceProvider = ({gamePrice, children}: Props) => {
   });
 
   const {price, discount} = gamePrice;
+
   const finalPrice = price - (discount ?? 0);
+
   const oldPriceFormatted = discount
     ? `de ${currency.format(price)}`
     : undefined;

@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 
 import GameList from './index';
-import Carrousel from './../carrousel';
+import Carrousel from '../carrousel';
 import {Banner, Game} from '../../../../../domain/types';
 
 const games: Game[] = [
@@ -75,12 +75,8 @@ describe('Game List Item', () => {
 
   it('must be not display header', () => {
     const {getByTestId} = render(<GameList games={games} />);
-
-    try {
-      getByTestId('carrousel');
-      fail();
-    } catch (e) {
-      expect(e.message).toBe('No instances found with testID: carrousel');
-    }
+    expect(() => getByTestId('carrousel')).toThrowError(
+      'No instances found with testID: carrousel',
+    );
   });
 });
