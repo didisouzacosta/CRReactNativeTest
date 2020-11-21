@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState, memo} from 'react';
 import {
   SafeAreaView,
   View,
@@ -50,9 +50,7 @@ const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
               placeholder="Informe o termo de busca"
               onFocus={() => setFocusing(true)}
               onTouchStart={onTouch}
-              onEndEditing={() => {
-                setFocusing(false);
-              }}
+              onEndEditing={() => setFocusing(false)}
               clearButtonMode="while-editing"
             />
             <SearchIcon width={20} height={20} />
@@ -112,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchBar;
+export default memo(SearchBar);
