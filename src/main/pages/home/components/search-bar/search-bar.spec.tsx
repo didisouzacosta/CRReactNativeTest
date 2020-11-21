@@ -1,7 +1,13 @@
 import React from 'react';
-import {render, fireEvent} from '@testing-library/react-native';
+import {
+  render,
+  fireEvent,
+  waitForElementToBeRemoved,
+  waitFor,
+} from '@testing-library/react-native';
 
 import SearchBar from './';
+import {View} from 'react-native';
 
 describe('Search Bar', () => {
   it('ensure search bar text input props consistency', () => {
@@ -35,5 +41,39 @@ describe('Search Bar', () => {
     fireEvent(textInput, 'onTouchStart');
 
     expect(mockOnTouchFunc).toBeCalled();
+  });
+
+  it('toggle overlay visibility', () => {
+    const {getByTestId} = render(
+      <SearchBar>
+        <View style={{width: 200, height: 200}} />
+      </SearchBar>,
+    );
+    const textInput = getByTestId('search-bar-text-input');
+
+    fireEvent(textInput, 'onFocus');
+
+    getByTestId('search-bar-overlay');
+
+    fireEvent(textInput, 'onEndEditing');
+
+    expect(() => getByTestId('search-bar-overlay')).toThrow();
+  });
+
+  it('remove overlay when touching ', async () => {
+    const {getByTestId} = render(
+      <SearchBar>
+        <View style={{width: 200, height: 200}} />
+      </SearchBar>,
+    );
+    const textInput = getByTestId('search-bar-text-input');
+
+    fireEvent(textInput, 'onFocus');
+
+    const overlay = getByTestId('search-bar-overlay');
+
+    fireEvent(overlay, 'onTouchEnd');
+
+    expect(() => getByTestId('search-bar-overlay')).toThrow();
   });
 });

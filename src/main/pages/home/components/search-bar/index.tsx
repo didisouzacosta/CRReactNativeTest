@@ -28,15 +28,13 @@ const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
   const [focusing, setFocusing] = useState(false);
 
   useEffect(() => {
-    if (focusing) setDisplayOverlay(true);
+    setDisplayOverlay(focusing);
 
     Animated.timing(fadeAnim, {
       toValue: focusing ? 0.8 : 0,
       duration: 226,
       useNativeDriver: true,
-    }).start(() => {
-      if (!focusing) setDisplayOverlay(false);
-    });
+    }).start();
   }, [focusing]);
 
   return (
@@ -52,7 +50,9 @@ const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
               placeholder="Informe o termo de busca"
               onFocus={() => setFocusing(true)}
               onTouchStart={onTouch}
-              onEndEditing={() => setFocusing(false)}
+              onEndEditing={() => {
+                setFocusing(false);
+              }}
               clearButtonMode="while-editing"
             />
             <SearchIcon width={20} height={20} />
@@ -63,7 +63,10 @@ const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
         <Animated.View
           testID="search-bar-overlay"
           style={{...styles.overlay, opacity: fadeAnim}}
-          onTouchEnd={() => searchTextInputRef?.current?.blur()}
+          onTouchEnd={() => {
+            searchTextInputRef?.current?.blur();
+            setFocusing(false);
+          }}
         />
       )}
       {children}
