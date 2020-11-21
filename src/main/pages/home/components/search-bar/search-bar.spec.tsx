@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  render,
-  fireEvent,
-  waitForElementToBeRemoved,
-  waitFor,
-} from '@testing-library/react-native';
+import {render, fireEvent} from '@testing-library/react-native';
 
 import SearchBar from './';
 import {View} from 'react-native';
