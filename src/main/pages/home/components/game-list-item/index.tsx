@@ -39,7 +39,10 @@ const GameListItem = ({game, onPress}: Props) => {
           </Text>
           <GamePriceProvider
             gamePrice={game.price}
-            children={({oldPriceFormatted, finalPriceFormatted}) => (
+            children={({
+              priceFormatted: oldPriceFormatted,
+              finalPriceFormatted,
+            }) => (
               <>
                 {oldPriceFormatted && (
                   <Text

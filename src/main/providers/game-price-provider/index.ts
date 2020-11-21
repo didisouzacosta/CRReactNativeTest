@@ -1,7 +1,7 @@
 import {Gameprice} from '../../../domain/types';
 
 type Value = {
-  oldPriceFormatted?: string;
+  priceFormatted?: string;
   finalPriceFormatted: string;
 };
 
@@ -17,17 +17,13 @@ const GamePriceProvider = ({gamePrice, children}: Props) => {
   });
 
   const {price, discount} = gamePrice;
-
   const finalPrice = price - (discount ?? 0);
-
-  const oldPriceFormatted = discount
-    ? `de ${currency.format(price)}`
-    : undefined;
+  const priceFormatted = discount ? `de ${currency.format(price)}` : undefined;
   const isFree = finalPrice <= 0;
   const finalPriceFormatted = isFree ? 'Grátis' : currency.format(finalPrice);
 
   return children({
-    oldPriceFormatted,
+    priceFormatted,
     finalPriceFormatted,
   });
 };
