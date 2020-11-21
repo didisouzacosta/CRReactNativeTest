@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   SafeAreaView,
   View,
@@ -6,6 +6,7 @@ import {
   TextInput,
   StyleProp,
   ViewStyle,
+  Animated,
 } from 'react-native';
 
 import StackView from '../../../../components/stack-view';
@@ -19,8 +20,23 @@ type Props = {
 
 const SearchBar = ({children, style, onPress}: Props) => {
   const SearchIcon = Assets.icons.SearchIcon;
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const searchTextInputRef = useRef<TextInput>(null);
 
   const [displayOverlay, setDisplayOverlay] = useState(false);
+  const [focusing, setFocusing] = useState(false);
+
+  useEffect(() => {
+    if (focusing) setDisplayOverlay(true);
+
+    Animated.timing(fadeAnim, {
+      toValue: focusing ? 0.8 : 0,
+      duration: 226,
+      useNativeDriver: true,
+    }).start(() => {
+      if (!focusing) setDisplayOverlay(false);
+    });
+  }, [focusing]);
 
   return (
     <View style={[style, styles.container]}>
@@ -28,10 +44,11 @@ const SearchBar = ({children, style, onPress}: Props) => {
         <View testID="search-bar" style={styles.searchBox}>
           <StackView direction="row" spacing={16}>
             <TextInput
+              ref={searchTextInputRef}
               style={styles.placeholder}
               placeholder="Informe o termo de busca"
-              onFocus={() => setDisplayOverlay(true)}
-              onEndEditing={() => setDisplayOverlay(false)}
+              onFocus={() => setFocusing(true)}
+              onEndEditing={() => setFocusing(false)}
               clearButtonMode="while-editing"
             />
             <SearchIcon width={20} height={20} />
@@ -39,7 +56,11 @@ const SearchBar = ({children, style, onPress}: Props) => {
         </View>
       </SafeAreaView>
       {displayOverlay && (
-        <View testID="search-bar-overlay" style={styles.overlay} />
+        <Animated.View
+          testID="search-bar-overlay"
+          style={{...styles.overlay, opacity: fadeAnim}}
+          onTouchEnd={() => searchTextInputRef?.current?.blur()}
+        />
       )}
       {children}
     </View>

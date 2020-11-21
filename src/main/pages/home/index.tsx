@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo} from 'react';
-import {Linking, SafeAreaView, StyleSheet, View} from 'react-native';
+import {Linking, SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 import StackView from '../../components/stack-view';
 import Carrousel from './components/carrousel';
 
@@ -32,6 +32,7 @@ const Home = () => {
 
   return (
     <SearchBar style={styles.searchBar}>
+      <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.safeArea}>
         <StackView spacing={32}>
           <GameList
