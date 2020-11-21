@@ -15,10 +15,11 @@ import Assets from './../../../../../assets';
 type Props = {
   children?: React.ReactNode;
   style?: StyleProp<ViewStyle>;
-  onPress?(): void;
+  onChangeText?(text: string): void;
+  onTouch?(): void;
 };
 
-const SearchBar = ({children, style, onPress}: Props) => {
+const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
   const SearchIcon = Assets.icons.SearchIcon;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const searchTextInputRef = useRef<TextInput>(null);
@@ -44,10 +45,13 @@ const SearchBar = ({children, style, onPress}: Props) => {
         <View testID="search-bar" style={styles.searchBox}>
           <StackView direction="row" spacing={16}>
             <TextInput
+              testID="search-bar-text-input"
+              onChangeText={onChangeText}
               ref={searchTextInputRef}
               style={styles.placeholder}
               placeholder="Informe o termo de busca"
               onFocus={() => setFocusing(true)}
+              onTouchStart={onTouch}
               onEndEditing={() => setFocusing(false)}
               clearButtonMode="while-editing"
             />
