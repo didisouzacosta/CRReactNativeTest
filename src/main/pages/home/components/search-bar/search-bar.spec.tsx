@@ -8,7 +8,7 @@ describe('Search Bar', () => {
   it('ensure search bar text input props consistency', () => {
     const mockOnChangeTextFunc = jest.fn();
     const {getByTestId} = render(
-      <SearchBar onChangeText={mockOnChangeTextFunc} />,
+      <SearchBar items={[]} onChangeText={mockOnChangeTextFunc} />,
     );
     const textInput = getByTestId('search-bar-text-input');
 
@@ -19,7 +19,7 @@ describe('Search Bar', () => {
   it('ensure on change text value consistency', () => {
     const mockOnChangeTextFunc = jest.fn();
     const {getByTestId} = render(
-      <SearchBar onChangeText={mockOnChangeTextFunc} />,
+      <SearchBar items={[]} onChangeText={mockOnChangeTextFunc} />,
     );
     const textInput = getByTestId('search-bar-text-input');
 
@@ -30,7 +30,9 @@ describe('Search Bar', () => {
 
   it('ensure on touch consistency', () => {
     const mockOnTouchFunc = jest.fn();
-    const {getByTestId} = render(<SearchBar onTouch={mockOnTouchFunc} />);
+    const {getByTestId} = render(
+      <SearchBar items={[]} onTouch={mockOnTouchFunc} />,
+    );
     const textInput = getByTestId('search-bar-text-input');
 
     fireEvent(textInput, 'onTouchStart');
@@ -40,7 +42,7 @@ describe('Search Bar', () => {
 
   it('toggle overlay visibility', () => {
     const {getByTestId} = render(
-      <SearchBar>
+      <SearchBar items={[]}>
         <View style={{width: 200, height: 200}} />
       </SearchBar>,
     );
@@ -57,7 +59,7 @@ describe('Search Bar', () => {
 
   it('remove overlay when touching ', async () => {
     const {getByTestId} = render(
-      <SearchBar>
+      <SearchBar items={[]}>
         <View style={{width: 200, height: 200}} />
       </SearchBar>,
     );

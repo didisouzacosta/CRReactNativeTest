@@ -4,12 +4,14 @@ export type Gameprice = {
 };
 
 export type Game = {
-  id?: string;
+  id?: number;
   imageURL?: string;
   producer: string;
   title: string;
   price: Gameprice;
 };
+
+export type GameSearchItem = Pick<Required<Game>, 'id' | 'title'>;
 
 export type Banner = {
   imageURL: string;

@@ -1,8 +1,10 @@
 import React, {useEffect, useMemo} from 'react';
 import {Linking, SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
+
+import {GameSearchItem} from '../../../domain/types';
+
 import StackView from '../../components/stack-view';
 import Carrousel from './components/carrousel';
-
 import GameList from './components/game-list';
 import SearchBar from './components/search-bar';
 import CartButton from './components/cart-button';
@@ -10,6 +12,13 @@ import useHomeState from './hooks/use-home-state';
 
 const Home = () => {
   const {games, banners, loadAllGames, loadAllBanners} = useHomeState();
+
+  const items: GameSearchItem[] = [
+    {id: 1, title: 'Zelda Breath of the Wild'},
+    {id: 2, title: 'Super Metroid'},
+    {id: 3, title: 'Hollow Night'},
+    {id: 4, title: 'Chrono Trigger'},
+  ];
 
   useEffect(() => {
     const fetch = async () => {
@@ -31,7 +40,11 @@ const Home = () => {
   }, [banners]);
 
   return (
-    <SearchBar style={styles.searchBar}>
+    <SearchBar
+      style={styles.searchBar}
+      items={items}
+      isLoading={true}
+      onSelectedItem={(item) => console.log(item)}>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.safeArea}>
         <StackView spacing={32}>

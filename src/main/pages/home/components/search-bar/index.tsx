@@ -8,31 +8,44 @@ import {
   ViewStyle,
   Animated,
 } from 'react-native';
+import {GameSearchItem} from '../../../../../domain/types';
 
 import StackView from '../../../../components/stack-view';
 import Assets from './../../../../../assets';
+import SearchBarList from './components/search-bar-list';
 
 type Props = {
   children?: React.ReactNode;
   style?: StyleProp<ViewStyle>;
+  items: GameSearchItem[];
+  isLoading?: boolean;
+  onSelectedItem?(item: GameSearchItem): void;
   onChangeText?(text: string): void;
   onTouch?(): void;
 };
 
-const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
+const SearchBar = ({
+  children,
+  style,
+  items,
+  isLoading,
+  onSelectedItem,
+  onChangeText,
+  onTouch,
+}: Props) => {
   const SearchIcon = Assets.icons.SearchIcon;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const searchTextInputRef = useRef<TextInput>(null);
 
-  const [displayOverlay, setDisplayOverlay] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const [focusing, setFocusing] = useState(false);
 
   useEffect(() => {
-    setDisplayOverlay(focusing);
+    setIsActive(focusing);
 
     Animated.timing(fadeAnim, {
-      toValue: focusing ? 0.8 : 0,
-      duration: 226,
+      toValue: focusing ? 0.6 : 0,
+      duration: 200,
       useNativeDriver: true,
     }).start();
   }, [focusing]);
@@ -55,9 +68,16 @@ const SearchBar = ({children, style, onChangeText, onTouch}: Props) => {
             />
             <SearchIcon width={20} height={20} />
           </StackView>
+          {isActive && (
+            <SearchBarList
+              items={items}
+              isLoading={isLoading}
+              onSelectedItem={onSelectedItem}
+            />
+          )}
         </View>
       </SafeAreaView>
-      {displayOverlay && (
+      {isActive && (
         <Animated.View
           testID="search-bar-overlay"
           style={{...styles.overlay, opacity: fadeAnim}}
