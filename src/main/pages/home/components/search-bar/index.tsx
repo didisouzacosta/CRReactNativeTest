@@ -8,8 +8,10 @@ import {
   ViewStyle,
   Animated,
 } from 'react-native';
-import {GameSearchItem} from '../../../../../domain/types';
 
+import {useDebouncedCallback} from 'use-debounce';
+
+import {GameSearchItem} from '../../../../../domain/types';
 import StackView from '../../../../components/stack-view';
 import Assets from './../../../../../assets';
 import SearchBarList from './components/search-bar-list';
@@ -19,6 +21,7 @@ type Props = {
   style?: StyleProp<ViewStyle>;
   items: GameSearchItem[];
   isLoading?: boolean;
+  delay?: number;
   onSelectedItem?(item: GameSearchItem): void;
   onChangeText?(text: string): void;
   onTouch?(): void;
@@ -29,6 +32,7 @@ const SearchBar = ({
   style,
   items,
   isLoading,
+  delay = 300,
   onSelectedItem,
   onChangeText,
   onTouch,
@@ -50,6 +54,10 @@ const SearchBar = ({
     }).start();
   }, [focusing]);
 
+  const onChangeTextHandler = useDebouncedCallback((text: string) => {
+    if (onChangeText) onChangeText(text);
+  }, delay);
+
   return (
     <View style={[style, styles.container]}>
       <SafeAreaView style={styles.safeArea}>
@@ -57,7 +65,7 @@ const SearchBar = ({
           <StackView direction="row" spacing={16}>
             <TextInput
               testID="search-bar-text-input"
-              onChangeText={onChangeText}
+              onChangeText={(text) => onChangeTextHandler.callback(text)}
               ref={searchTextInputRef}
               style={styles.placeholder}
               placeholder="Informe o termo de busca"

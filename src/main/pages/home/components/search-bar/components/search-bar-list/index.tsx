@@ -20,7 +20,6 @@ const SearchBarList = ({items, isLoading, onSelectedItem}: Props) => {
           animating={true}
         />
       )}
-      <View style={{height: 1, backgroundColor: '#f1f1f1'}} />
       {items.map((item, index) => (
         <SearchBarListItem
           key={index}

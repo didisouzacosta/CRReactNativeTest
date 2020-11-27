@@ -12,6 +12,16 @@ const games: Game[] = [
     },
   },
   {
+    title: 'Star Fox',
+    producer: 'Nintendo',
+    imageURL:
+      'https://img.ibxk.com.br//2016/02/06/06092953905009.jpg?w=1200&h=675&mode=crop&scale=both',
+    price: {
+      discount: 100,
+      price: 350,
+    },
+  },
+  {
     title: 'Super Metroid',
     producer: 'Nintendo',
     imageURL:

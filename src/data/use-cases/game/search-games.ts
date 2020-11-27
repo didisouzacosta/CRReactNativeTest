@@ -21,16 +21,24 @@ const games: GameSearchItem[] = [
     id: 5,
     title: 'Super Mario All Stars Delux',
   },
+  {
+    id: 6,
+    title: 'Star Fox',
+  },
 ];
 
 const SearchGames = async (query: string) => {
   if (!query) return Promise.resolve([]);
 
-  const result = games.filter((game) =>
-    game.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()),
-  );
+  return new Promise<GameSearchItem[]>((resolve, _) => {
+    const result = games.filter((game) =>
+      game.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()),
+    );
 
-  return Promise.resolve(result);
+    setTimeout(() => {
+      resolve(result);
+    }, 200);
+  });
 };
 
 export default SearchGames;
