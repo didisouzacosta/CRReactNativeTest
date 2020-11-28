@@ -3,6 +3,7 @@ import {StyleSheet, TouchableOpacity} from 'react-native';
 
 import {Game} from '../../../../domain/types';
 import {StackView, Text, ImageView} from '../../../../components';
+import {Typography, Spacing} from './../../../../styles';
 import GamePriceProvider from '../../../../providers/game-price-provider';
 
 type Props = {
@@ -22,7 +23,7 @@ const GameListItem = ({game, onPress}: Props) => {
       }}>
       <StackView style={styles.container}>
         <ImageView style={styles.image} uri={imageURL} />
-        <StackView spacing={4}>
+        <StackView spacing={Spacing.SCALE_4}>
           <Text
             style={styles.producer}
             testID="producer"
@@ -69,16 +70,16 @@ const styles = StyleSheet.create({
   container: {},
   image: {
     aspectRatio: 1,
-    borderRadius: 8,
+    borderRadius: Spacing.SCALE_8,
   },
   producer: {
-    fontSize: 12,
+    fontSize: Typography.FONT_SIZE_12,
   },
   title: {
     fontWeight: 'bold',
   },
   oldPrice: {
-    fontSize: 12,
+    fontSize: Typography.FONT_SIZE_12,
     textDecorationLine: 'line-through',
   },
   price: {

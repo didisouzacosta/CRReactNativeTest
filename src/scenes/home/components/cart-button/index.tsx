@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import Text from '../../../../components/typography/text';
+import {FONT_SIZE_12} from '../../../../styles/typography';
 import Assets from './../../../../assets';
 
 type Props = {
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
   },
   badgeCount: {
     textAlign: 'center',
-    fontSize: 12,
+    fontSize: FONT_SIZE_12,
     color: 'black',
     fontWeight: 'bold',
   },

@@ -3,6 +3,7 @@ import {ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 
 import {Banner} from '../../../../domain/types';
 import {StackView, ImageView} from '../../../../components';
+import {SCALE_8} from '../../../../styles/spacing';
 
 type Prop = {
   banners: Banner[];
@@ -35,26 +36,28 @@ const Carrousel = ({banners, onPress}: Prop) => {
   );
 };
 
+const aspectRatio = 16 / 9;
+const marginOffset = SCALE_8 / 2;
+
 const styles = StyleSheet.create({
   scrollView: {
     overflow: 'visible',
-    aspectRatio: 16 / 9,
-    marginLeft: -4,
-    marginRight: -4,
+    aspectRatio,
+    marginLeft: -marginOffset,
+    marginRight: -marginOffset,
   },
   stackView: {
     width: '100%',
   },
   bannerItem: {
-    borderRadius: 9,
+    borderRadius: SCALE_8,
     backgroundColor: 'white',
-    aspectRatio: 16 / 9,
+    aspectRatio,
     overflow: 'hidden',
-    marginLeft: 4,
-    marginRight: 4,
+    marginLeft: marginOffset,
+    marginRight: marginOffset,
   },
   image: {
-    width: '100%',
     height: '100%',
   },
 });

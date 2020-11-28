@@ -15,6 +15,8 @@ import {GameSearchItem} from '../../../../domain/types';
 import {StackView} from '../../../../components';
 import Assets from './../../../../assets';
 import SearchBarList from './components/search-bar-list';
+import {FONT_SIZE_17} from '../../../../styles/typography';
+import {SCALE_8} from '../../../../styles/spacing';
 
 type Props = {
   children?: React.ReactNode;
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
     paddingRight: 16,
     marginTop: 16,
-    borderRadius: 8,
+    borderRadius: SCALE_8,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.4,
@@ -124,7 +126,7 @@ const styles = StyleSheet.create({
   },
   placeholder: {
     flex: 1,
-    fontSize: 17,
+    fontSize: FONT_SIZE_17,
   },
   overlay: {
     position: 'absolute',
