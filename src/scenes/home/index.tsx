@@ -9,12 +9,17 @@ const Home = () => {
   const {
     games,
     banners,
-    searching,
-    searchItems,
+    searchGamesResponse,
     loadAllGames,
     loadAllBanners,
     search,
   } = useHomeState();
+
+  const {
+    items: searchGamesItems,
+    isLoading: searchGamesIsLoading,
+    error: searchGamesError,
+  } = searchGamesResponse;
 
   useEffect(() => {
     const fetch = async () => {
@@ -38,8 +43,8 @@ const Home = () => {
   return (
     <SearchBar
       style={styles.searchBar}
-      items={searchItems}
-      isLoading={searching}
+      items={searchGamesItems}
+      isLoading={searchGamesIsLoading}
       onChangeText={(text) => search(text)}
       onSelectedItem={(item) => console.log(item)}>
       <StatusBar barStyle="light-content" />
