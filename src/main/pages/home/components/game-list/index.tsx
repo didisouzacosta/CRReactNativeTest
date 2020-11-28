@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, FlatList, StyleSheet, StyleProp, ViewStyle} from 'react-native';
 import {Game} from '../../../../../domain/types';
 
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
   column: {justifyContent: 'space-between'},
 });
 
-export default GameList;
+export default memo(GameList);

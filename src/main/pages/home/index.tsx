@@ -1,12 +1,9 @@
 import React, {useEffect, useMemo} from 'react';
 import {Linking, SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
-import StackView from '../../components/stack-view';
-import Carrousel from './components/carrousel';
-import GameList from './components/game-list';
-import SearchBar from './components/search-bar';
-import CartButton from './components/cart-button';
-import useHomeState from './hooks/use-home-state';
+import {StackView} from '../../components';
+import {Carrousel, GameList, SearchBar, CartButton} from './components';
+import useHomeState from './use-home-state';
 
 const Home = () => {
   const {

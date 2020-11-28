@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {
   TouchableOpacity,
   StyleSheet,
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CartButton;
+export default memo(CartButton);

@@ -20,13 +20,14 @@ const SearchBarList = ({items, isLoading, onSelectedItem}: Props) => {
           animating={true}
         />
       )}
-      {items.map((item, index) => (
-        <SearchBarListItem
-          key={index}
-          item={item}
-          onSelectedItem={onSelectedItem}
-        />
-      ))}
+      {!isLoading &&
+        items.map((item, index) => (
+          <SearchBarListItem
+            key={index}
+            item={item}
+            onSelectedItem={onSelectedItem}
+          />
+        ))}
     </View>
   );
 };
