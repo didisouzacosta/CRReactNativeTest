@@ -1,4 +1,4 @@
-import {Gameprice} from '../../../domain/types';
+import {Gameprice} from '../../domain/types';
 
 type Value = {
   priceFormatted?: string;

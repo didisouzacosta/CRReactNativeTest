@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
 import {ActivityIndicator, View, StyleSheet} from 'react-native';
-import {GameSearchItem} from '../../../../../../../domain/types';
+import {GameSearchItem} from '../../../../../../domain/types';
 
 import SearchBarListItem from '../search-bar-list-item';
 

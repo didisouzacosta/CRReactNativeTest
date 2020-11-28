@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 
-import {Game} from '../../../../../domain/types';
+import {Game} from '../../../../domain/types';
 import {StackView, Text, ImageView} from '../../../../components';
 import GamePriceProvider from '../../../../providers/game-price-provider';
 

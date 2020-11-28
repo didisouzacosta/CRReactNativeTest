@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import Home from './src/main/pages/home';
+import Home from './src/scenes/home';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => Home);

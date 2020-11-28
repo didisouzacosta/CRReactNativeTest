@@ -3,7 +3,7 @@ import {fireEvent, render} from '@testing-library/react-native';
 
 import GameList from './index';
 import Carrousel from '../carrousel';
-import {Banner, Game} from '../../../../../domain/types';
+import {Banner, Game} from '../../../../domain/types';
 
 const games: Game[] = [
   {

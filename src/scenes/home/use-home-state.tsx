@@ -1,8 +1,8 @@
 import {useState} from 'react';
-import LoadAllBanners from '../../../data/use-cases/banner/load-all-banners';
-import LoadAllGames from '../../../data/use-cases/game/load-all-games';
-import SearchGames from '../../../data/use-cases/game/search-games';
-import {Banner, Game, GameSearchItem} from '../../../domain/types';
+import LoadAllBanners from '../../data/use-cases/banner/load-all-banners';
+import LoadAllGames from '../../data/use-cases/game/load-all-games';
+import SearchGames from '../../data/use-cases/game/search-games';
+import {Banner, Game, GameSearchItem} from '../../domain/types';
 
 const useHomeState = () => {
   const [games, setGames] = useState<Game[]>([]);

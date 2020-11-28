@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 
-import {Banner} from '../../../../../domain/types';
+import {Banner} from '../../../../domain/types';
 import {StackView, ImageView} from '../../../../components';
 
 type Prop = {

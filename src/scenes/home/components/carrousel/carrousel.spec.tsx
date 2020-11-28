@@ -2,7 +2,7 @@ import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
 
 import Carrousel from './index';
-import {Banner} from '../../../../../domain/types';
+import {Banner} from '../../../../domain/types';
 
 describe('Game List Item', () => {
   it('renders correctly', () => {

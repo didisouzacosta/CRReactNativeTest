@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
 import {View, FlatList, StyleSheet, StyleProp, ViewStyle} from 'react-native';
-import {Game} from '../../../../../domain/types';
+import {Game} from '../../../../domain/types';
 
 import GameListItem from '../game-list-item';
 

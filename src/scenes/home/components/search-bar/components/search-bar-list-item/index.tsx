@@ -1,9 +1,9 @@
 import React, {memo} from 'react';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
 
-import Assets from '../../../../../../../assets';
+import Assets from '../../../../../../assets';
 import {StackView, Text} from '../../../../../../components';
-import {GameSearchItem} from '../../../../../../../domain/types';
+import {GameSearchItem} from '../../../../../../domain/types';
 
 type Props = {
   item: GameSearchItem;

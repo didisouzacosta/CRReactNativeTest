@@ -11,9 +11,9 @@ import {
 
 import {useDebouncedCallback} from 'use-debounce';
 
-import {GameSearchItem} from '../../../../../domain/types';
+import {GameSearchItem} from '../../../../domain/types';
 import {StackView} from '../../../../components';
-import Assets from './../../../../../assets';
+import Assets from './../../../../assets';
 import SearchBarList from './components/search-bar-list';
 
 type Props = {

@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 
 import GameListItem from './index';
-import {Game} from '../../../../../domain/types';
+import {Game} from '../../../../domain/types';
 
 describe('Game List Item', () => {
   it('renders correctly', () => {
