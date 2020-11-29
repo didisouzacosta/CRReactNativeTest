@@ -1,4 +1,4 @@
-import {useReducer, useState} from 'react';
+import {useReducer} from 'react';
 import LoadAllBanners from '../../services/use-cases/banner/load-all-banners';
 import LoadAllGames from '../../services/use-cases/game/load-all-games';
 import SearchGames from '../../services/use-cases/game/search-games';
@@ -23,45 +23,48 @@ const gamesInitialState: GamesState = {items: []};
 const useHomeState = () => {
   const [cartState, cartDispatch] = useReducer(cartReduce, cartInitialState);
 
-  const [gameSearchState, gameSearchDispach] = useReducer(
+  const [gameSearchState, gameSearchDispatch] = useReducer(
     gameSearchReduce,
     gameSearchInitialState,
   );
 
-  const [bannerState, bannerDispach] = useReducer(
+  const [bannerState, bannerDispatch] = useReducer(
     bannerReduce,
     bannerInitialState,
   );
 
-  const [gamesState, gamesDispach] = useReducer(gamesReduce, gamesInitialState);
+  const [gamesState, gamesDispatch] = useReducer(
+    gamesReduce,
+    gamesInitialState,
+  );
 
   const loadGames = async () => {
-    gamesDispach({type: 'games start'});
+    gamesDispatch({type: 'games start'});
     try {
       const games = await LoadAllGames();
-      gamesDispach({type: 'games success', payload: games});
+      gamesDispatch({type: 'games success', payload: games});
     } catch (error) {
-      gamesDispach({type: 'games fail', error});
+      gamesDispatch({type: 'games fail', error});
     }
   };
 
   const loadBanners = async () => {
-    bannerDispach({type: 'banner start'});
+    bannerDispatch({type: 'banner start'});
     try {
       const items = await LoadAllBanners();
-      bannerDispach({type: 'banner success', payload: items});
+      bannerDispatch({type: 'banner success', payload: items});
     } catch (error) {
-      bannerDispach({type: 'banner fail', error});
+      bannerDispatch({type: 'banner fail', error});
     }
   };
 
   const search = async (query: string) => {
-    gameSearchDispach({type: 'search start'});
+    gameSearchDispatch({type: 'search start'});
     try {
       const items = await SearchGames(query);
-      gameSearchDispach({type: 'search success', payload: items});
+      gameSearchDispatch({type: 'search success', payload: items});
     } catch (error) {
-      gameSearchDispach({type: 'search fail', error});
+      gameSearchDispatch({type: 'search fail', error});
     }
   };
 
