@@ -1,8 +1,7 @@
 import {useReducer, useState} from 'react';
-import LoadAllBanners from '../../data/use-cases/banner/load-all-banners';
-import LoadAllGames from '../../data/use-cases/game/load-all-games';
-import SearchGames from '../../data/use-cases/game/search-games';
-import {Game} from '../../domain/types';
+import LoadAllBanners from '../../services/use-cases/banner/load-all-banners';
+import LoadAllGames from '../../services/use-cases/game/load-all-games';
+import SearchGames from '../../services/use-cases/game/search-games';
 
 import cartReduce, {State as CartReduceState} from './reducers/cart-reduce';
 
