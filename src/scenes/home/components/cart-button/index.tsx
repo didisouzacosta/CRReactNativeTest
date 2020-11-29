@@ -5,6 +5,7 @@ import {
   StyleProp,
   ViewStyle,
   View,
+  ActivityIndicator,
 } from 'react-native';
 
 import Text from '../../../../components/typography/text';
@@ -13,16 +14,31 @@ import Assets from './../../../../assets';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
+  count?: number;
+  isLoading?: boolean;
+  onPress?(): void;
 };
 
-const CartButton = ({style}: Props) => {
+const Loader = () => {
+  return <ActivityIndicator />;
+};
+
+const Counter = ({value}: {value?: number}) => {
+  return <Text style={styles.badgeCount}>{value}</Text>;
+};
+
+const CartButton = ({style, count, isLoading, onPress}: Props) => {
   const {ShoppingCartIcon} = Assets.icons;
 
   return (
-    <TouchableOpacity activeOpacity={0.9} style={[style, styles.container]}>
+    <TouchableOpacity
+      activeOpacity={0.9}
+      style={[style, styles.container]}
+      onPress={onPress}>
       <ShoppingCartIcon width="50%" height="50%" />
       <View style={styles.badge}>
-        <Text style={styles.badgeCount}>9+</Text>
+        {isLoading && <Loader />}
+        {!isLoading && <Counter value={count} />}
       </View>
     </TouchableOpacity>
   );

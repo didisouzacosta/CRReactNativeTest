@@ -2,60 +2,57 @@ import React, {useEffect, useMemo} from 'react';
 import {Linking, SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
 import {StackView} from '../../components';
+import {Banner} from '../../domain/types';
 import {Carrousel, GameList, SearchBar, CartButton} from './components';
+
 import useHomeState from './use-home-state';
+
+const renderHeader = (banners: Banner[]) => {
+  return (
+    <View style={styles.bannerContainer}>
+      <Carrousel banners={banners} onPress={({url}) => Linking.openURL(url)} />
+    </View>
+  );
+};
 
 const Home = () => {
   const {
-    games,
-    banners,
-    searchGamesResponse,
-    loadAllGames,
-    loadAllBanners,
+    gamesState,
+    bannerState,
+    gameSearchState,
+    cartState,
     search,
+    loadGames,
+    loadBanners,
+    incrementCount,
   } = useHomeState();
 
-  const {
-    items: searchGamesItems,
-    isLoading: searchGamesIsLoading,
-    error: searchGamesError,
-  } = searchGamesResponse;
-
   useEffect(() => {
-    const fetch = async () => {
-      await Promise.all([loadAllGames(), loadAllBanners()]);
-    };
-    fetch();
+    loadBanners();
+    loadGames();
   }, []);
-
-  const {header} = useMemo(() => {
-    const header = (
-      <View style={styles.bannerContainer}>
-        <Carrousel
-          banners={banners}
-          onPress={({url}) => Linking.openURL(url)}
-        />
-      </View>
-    );
-    return {header};
-  }, [banners]);
 
   return (
     <SearchBar
       style={styles.searchBar}
-      items={searchGamesItems}
-      isLoading={searchGamesIsLoading}
+      items={gameSearchState.items}
+      isLoading={gameSearchState.isLoading}
       onChangeText={(text) => search(text)}
       onSelectedItem={(item) => console.log(item)}>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={styles.safeArea}>
         <StackView spacing={32}>
           <GameList
-            games={games}
-            header={header}
+            games={gamesState.items}
+            header={renderHeader(bannerState.items)}
             onPress={(game) => console.log(game)}
           />
-          <CartButton style={styles.cartButton} />
+          <CartButton
+            style={styles.cartButton}
+            isLoading={cartState.isLoading}
+            count={cartState.count}
+            onPress={incrementCount}
+          />
         </StackView>
       </SafeAreaView>
     </SearchBar>
