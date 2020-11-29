@@ -65,7 +65,7 @@ const useHomeState = () => {
     }
   };
 
-  const incrementCount = async () => {
+  const incrementCount = () => {
     cartDispatch({type: 'increment start'});
     cartDispatch({type: 'increment success'});
   };

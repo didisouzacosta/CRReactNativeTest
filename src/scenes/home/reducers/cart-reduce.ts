@@ -10,7 +10,7 @@ const cartReduce = (state: State, action: Action): State => {
     case 'increment start':
       return {...state, isLoading: true};
     case 'increment success':
-      return {...state, count: state.count + 10, isLoading: false};
+      return {...state, count: state.count + 1, isLoading: false};
     case 'increment fail':
       return {...state, error: action.error, isLoading: false};
   }
