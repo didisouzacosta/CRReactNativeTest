@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <SearchBar
       style={styles.searchBar}
-      items={gameSearchState.items}
+      items={gameSearchState.data}
       isLoading={gameSearchState.isLoading}
       onChangeText={(text) => search(text)}
       onSelectedItem={(item) => console.log(item)}>
@@ -43,14 +43,14 @@ const Home = () => {
       <SafeAreaView style={styles.safeArea}>
         <StackView spacing={32}>
           <GameList
-            games={gamesState.items}
-            header={renderHeader(bannerState.items)}
+            games={gamesState.data}
+            header={renderHeader(bannerState.data)}
             onPress={(game) => console.log(game)}
           />
           <CartButton
             style={styles.cartButton}
             isLoading={cartState.isLoading}
-            count={cartState.count}
+            count={cartState.data}
             onPress={incrementCount}
           />
         </StackView>

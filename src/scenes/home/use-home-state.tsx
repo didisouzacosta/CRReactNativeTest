@@ -15,10 +15,10 @@ import bannerReduce, {
 
 import gamesReduce, {State as GamesState} from './reducers/games-reduce';
 
-const cartInitialState: CartReduceState = {count: 0};
-const gameSearchInitialState: GameSearchReduceState = {items: []};
-const bannerInitialState: BannerReduceState = {items: []};
-const gamesInitialState: GamesState = {items: []};
+const cartInitialState: CartReduceState = {data: 0};
+const gameSearchInitialState: GameSearchReduceState = {data: []};
+const bannerInitialState: BannerReduceState = {data: []};
+const gamesInitialState: GamesState = {data: []};
 
 const useHomeState = () => {
   const [cartState, cartDispatch] = useReducer(cartReduce, cartInitialState);

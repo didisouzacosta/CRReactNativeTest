@@ -17,3 +17,9 @@ export type Banner = {
   imageURL: string;
   url: string;
 };
+
+export type ReduceState<T> = {
+  data: T;
+  isLoading?: boolean;
+  error?: Error;
+};
