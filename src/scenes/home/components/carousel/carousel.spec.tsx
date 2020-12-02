@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
 
-import Carrousel from './index';
+import Carousel from './index';
 import {Banner} from '../../../../domain/types';
 
 describe('Game List Item', () => {
@@ -19,7 +19,7 @@ describe('Game List Item', () => {
       },
     ];
 
-    const tree = render(<Carrousel banners={banners} />).toJSON();
+    const tree = render(<Carousel banners={banners} />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -43,8 +43,8 @@ describe('Game List Item', () => {
       },
     ];
 
-    const {getAllByTestId} = render(<Carrousel banners={banners} />);
-    const elements = getAllByTestId('carrousel-item');
+    const {getAllByTestId} = render(<Carousel banners={banners} />);
+    const elements = getAllByTestId('carousel-item');
 
     expect(elements.length).toBe(3);
   });
@@ -65,9 +65,9 @@ describe('Game List Item', () => {
 
     const mockFunc = jest.fn();
     const {getAllByTestId} = render(
-      <Carrousel banners={banners} onPress={mockFunc} />,
+      <Carousel banners={banners} onPress={mockFunc} />,
     );
-    const elements = getAllByTestId('carrousel-item');
+    const elements = getAllByTestId('carousel-item');
 
     fireEvent.press(elements[1]);
 

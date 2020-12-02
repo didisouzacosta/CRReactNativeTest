@@ -3,14 +3,14 @@ import {Linking, SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
 import {StackView} from '../../components';
 import {Banner} from '../../domain/types';
-import {Carrousel, GameList, SearchBar, CartButton} from './components';
+import {Carousel, GameList, SearchBar, CartButton} from './components';
 
 import useHomeState from './use-home-state';
 
 const renderHeader = (banners: Banner[]) => {
   return (
     <View style={styles.bannerContainer}>
-      <Carrousel banners={banners} onPress={({url}) => Linking.openURL(url)} />
+      <Carousel banners={banners} onPress={({url}) => Linking.openURL(url)} />
     </View>
   );
 };
