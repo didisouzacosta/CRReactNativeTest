@@ -7,6 +7,7 @@ import {SCALE_8} from '../../../../styles/spacing';
 
 type Prop = {
   banners: Banner[];
+  
   onPress?(banner: Banner): void;
 };
 
